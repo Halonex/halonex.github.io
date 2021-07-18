@@ -1,0 +1,65 @@
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #efefef;
+  font-weight: normal;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+h1 a {
+  color: #efefef;
+  border-bottom: 2px solid #efefef;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+h1 a:hover {
+  color: yellowgreen;
+  border-color: yellowgreen;
+}
+
+#list {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;     
+  width: 300px;
+}
+
+.tile {
+  background-color: white;
+  color: #3A3A4D;
+  position: relative;
+  font-weight: bold;
+}
+
+/* mine below */
+
+.tile {
+  clear: both;
+  margin-top: 10px;
+  padding: 0px;  
+  width: 300px;
+}
+
+.tile:first-child {
+}
+
+.tile .content {  
+  padding: 10px;
+}
+
+.scrubber {
+  cursor: ns-resize;
+  float: right;
+  background-color: black;
+  width: 15px;
+  height: 3px;
+}
+
+.note {
+  color: grey;
+  transform: matrix(1, 0, -0.1, 1, 0, 0);
+}
