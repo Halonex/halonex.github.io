@@ -6,7 +6,7 @@ input.addEventListener("keydown", function(event) {
 
   if (event.keyCode === 13) {
    event.preventDefault();
-   document.getElementById("132").click();
+   document.getElementById("f132").click();
   }
 });
 
@@ -27,7 +27,7 @@ function addOption(c){
   count = c;
   var id = c + "o" + (optionCount[c] - 1);
   console.log(id);
-  var code = '<br><div class="form-floating"><textarea class="form-control" placeholder="Option" id="floatingTextarea"></textarea><label for="floatingTextarea">Option ' + optionCount[c] +'</label></div></div>';
+  var code = '<br><div class="container"><div class="row"><div class="col-1"><input type = "checkbox"></div><div class="col"><div class="form-floating"><textarea class="form-control" placeholder="Option" id="floatingTextarea"></textarea><label for="floatingTextarea">Option ' + optionCount[c] +'</label></div></div></div>';
   document.getElementById(id).innerHTML += code + "</div><div id = " + count + "o" + optionCount[c] + ">";
   optionCount[c]  += 1;
 }
