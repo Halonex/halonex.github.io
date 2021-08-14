@@ -6,6 +6,32 @@
 			textarea::-webkit-scrollbar {display: none;}
 			div::-webkit-scrollbar {display: none;}
 		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<style type="text/css">
+			canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+a,
+a:visited {
+  color: #e34234;
+  transition: 0.25s;
+}
+
+a:hover,
+a:focus {
+  color: #ba160c;
+}
+
+		</style>
 
 		<meta charset="utf-8">
 
@@ -27,6 +53,7 @@
 	</head>
 
 	<body>
+		<div id="particles-js"></div>
 
 <div>
 
@@ -60,7 +87,7 @@
 
 			<div class="resizable-right" id="win2">
 
-<div style="padding: 20px;">
+<div class = "newdiv" style="padding: 20px;">
 <div class="window" style="overflow-y: scroll; background-color:#121212;">
   <div class="titlebar" style="position: sticky;top: 0px;left: 0px;">
     <div class="buttons">
@@ -80,34 +107,121 @@
     Python
   </div>
   <div class="content">
-    <pre><code class="language-python" id = "er">
-  					</code></pre>
+    <pre><code class="language-python" id = "er"></code></pre>
   </div>
 </div>
 </div>
-
-<!--
-
-				<div style="margin: 0; height: 100%; width: 100%;">
-					<div class="card text-center">
-		  			<div class="card-header" style = "padding: 10px;">
-		    			Preview <button onclick="d();" style="float: right; "type="button" class="btn btn-outline-dark">Embed</button>
-		  			</div>
-		  			<div class="card-body" style="position: relative; height: 90vh; width: 100%; overflow : scroll; background-color: black;" id = "cb">
-
-  					
-
-						</div>
-					</div>
-		  	<div class="card-footer text-muted">
-		    	Preview - (Under Development)
-		  	</div>
-			</div> -->
-
-
 		</div>			 
 	</div>
 </div>
+<script src='https://cldup.com/S6Ptkwu_qA.js'></script>
+<script type="text/javascript">
+	// ParticlesJS Config.
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 700 } },
+
+
+    "color": {
+      "value": "#ffffff" },
+
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000" },
+
+      "polygon": {
+        "nb_sides": 5 } },
+
+
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 0.1,
+        "opacity_min": 0.1,
+        "sync": false } },
+
+
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 10,
+        "size_min": 0.1,
+        "sync": false } },
+
+
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1 },
+
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200 } } },
+
+
+
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab" },
+
+      "onclick": {
+        "enable": true,
+        "mode": "push" },
+
+      "resize": true },
+
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1 } },
+
+
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3 },
+
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4 },
+
+      "push": {
+        "particles_nb": 4 },
+
+      "remove": {
+        "particles_nb": 2 } } },
+
+
+
+  "retina_detect": true });
+</script>
 
 	<script>
 

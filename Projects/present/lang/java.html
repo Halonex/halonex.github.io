@@ -2,9 +2,32 @@
 
 <html>
 	<head>
+
+
 		<style type="text/css">
 			textarea::-webkit-scrollbar {display: none;}
 			div::-webkit-scrollbar {display: none;}
+		</style>
+
+		<style type="text/css">
+
+.newdiv {
+	background: linear-gradient(180deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 		</style>
 
 		<meta charset="utf-8">
@@ -24,6 +47,7 @@
 
 <link rel="stylesheet" href="./hl.css">
 <link rel="stylesheet" href="./style1.css">
+<link rel="stylesheet" href="./style2.css">
 	</head>
 
 	<body>
@@ -60,7 +84,7 @@
 
 			<div class="resizable-right" id="win2">
 
-<div style="padding: 20px;">
+<div class = "newdiv" style="padding: 20px;">
 <div class="window" style="overflow-y: scroll; background-color:#121212;">
   <div class="titlebar" style="position: sticky;top: 0px;left: 0px;">
     <div class="buttons">
@@ -80,8 +104,7 @@
     Java
   </div>
   <div class="content">
-    <pre><code class="language-java" id = "er">
-  					</code></pre>
+    <pre><code class="language-java" id = "er"></code></pre>
   </div>
 </div>
 </div>
