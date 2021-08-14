@@ -68,3 +68,8 @@ window.smoothScroll = function(target) {
     }
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
+
+window.onbeforeunload = function() {
+    //Whatever
+    return "WARNING! You have unsaved changes that may be lost!";
+}
