@@ -9,6 +9,7 @@
 </style><style type="text/css">
 
 body {
+	
 	background: linear-gradient(180deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	animation: gradient 15s ease infinite;
 }
@@ -58,11 +59,11 @@ body {
         <a class="closebutton" href="#"><span><strong>x</strong></span></a>
    
       </div>
-      <div class="minimize">
+      <div class="minimize" onclick="exitFullscreen();">
         <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
      
       </div>
-      <div class="zoom">
+      <div class="zoom" onclick="openFullscreen();">
         <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
         
       </div>
@@ -75,6 +76,32 @@ body {
 </div>
 </div>
 
+<script>
+
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
 
 	</body>
 </html>

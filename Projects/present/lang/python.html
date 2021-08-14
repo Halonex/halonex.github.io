@@ -96,11 +96,11 @@ a:focus {
         <!-- close button link -->
       </div>
       <div class="minimize">
-        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
+        <a class="minimizebutton" onclick="exitFullscreen();" href="#"><span><strong>&ndash;</strong></span></a>
         <!-- minimize button link -->
       </div>
       <div class="zoom">
-        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
+        <a class="zoombutton" onclick="openFullscreen();" href="#"><span><strong>+</strong></span></a>
         <!-- zoom button link -->
       </div>
     </div>
@@ -266,6 +266,31 @@ particlesJS("particles-js", {
   	}
 
   </script>
+<script>
 
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
 	</body>
 </html>
