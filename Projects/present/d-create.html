@@ -28,7 +28,7 @@
   #mydiv1 {
     position: absolute;
     text-align: center;
-    background :black;
+    background :lightgrey;
     border-radius: 8px;
     width: 300px;
     top: 200px;
@@ -57,9 +57,9 @@
 
   <link rel="stylesheet" href="https://halonex.github.io/Projects/assessment/style.css">
 
-  <link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./hl.css">
+  <link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/hl.css">
 
-  <link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./style1.css">
+  <link rel="stylesheet" href="style1.css">
   
     </head>
 
@@ -94,7 +94,70 @@
     margin-top: 0px; translate-y = 10px;">
     
     <div class="content">
-      <pre><code class="language-java" id = "er"></code></pre>
+      <pre class="  language-python" tabindex="0"><code class="  language-python" id="er">function merge<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> l<span class="token punctuation">,</span> m<span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    var n1 <span class="token operator">=</span> m <span class="token operator">-</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    var n2 <span class="token operator">=</span> r <span class="token operator">-</span> m<span class="token punctuation">;</span>
+    var L <span class="token operator">=</span> new Array<span class="token punctuation">(</span>n1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    var R <span class="token operator">=</span> new Array<span class="token punctuation">(</span>n2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>var i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n1<span class="token punctuation">;</span> i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span>
+        L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>l <span class="token operator">+</span> i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>var j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n2<span class="token punctuation">;</span> j<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span>
+        R<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>m <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+ 
+    var i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    var j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    var k <span class="token operator">=</span> l<span class="token punctuation">;</span>
+ 
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> n1 <span class="token operator">&amp;</span><span class="token operator">&amp;</span> j <span class="token operator">&lt;</span> n2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            j<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        k<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> n1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+        k<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> n2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        j<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+        k<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+function mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>l<span class="token operator">&gt;=</span>r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span><span class="token operator">//</span>returns recursively
+    <span class="token punctuation">}</span>
+    var m <span class="token operator">=</span>l<span class="token operator">+</span> parseInt<span class="token punctuation">(</span><span class="token punctuation">(</span>r<span class="token operator">-</span>l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span>l<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span>m<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    merge<span class="token punctuation">(</span>arr<span class="token punctuation">,</span>l<span class="token punctuation">,</span>m<span class="token punctuation">,</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+function printArray<span class="token punctuation">(</span> A<span class="token punctuation">,</span> size<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>var i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span>
+       document<span class="token punctuation">.</span>write<span class="token punctuation">(</span>  A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+ 
+var arr <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+    var arr_size <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+ 
+    document<span class="token punctuation">.</span>write<span class="token punctuation">(</span>  <span class="token string">"Given array is "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    printArray<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> arr_size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    mergeSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> arr_size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    document<span class="token punctuation">.</span>write<span class="token punctuation">(</span> <span class="token string">"Sorted array is "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    printArray<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> arr_size<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
     </div>
   </div>
   </div>
@@ -122,16 +185,29 @@
           <!-- zoom button link -->
         </div>
       </div>
-      User Guide
     </div>
     
     
     </div>
-  <div class="window" style="overflow-y: scroll; background-color:#121212;
-    margin-top: 0px; translate-y = 10px; width: 300px; height: 300px;">
+  <div class="window" style="overflow-y: scroll; background-color:white;
+    margin-top: 0px; translate-y = 10px; width: 300px; height: 400px;">
     
-    <div class="content">
-      <pre><code class="language-java" id = "er"></code></pre>
+    <div class="content" style="text-align: left; ">
+      
+        <h6>Supported Languages</h6>
+
+          <center>
+        <div class="card" style="width: 90%; border:none;">
+  <ul class="list-group list-group-flush">
+    <li onclick=" window.open('https://halonex.github.io/Projects/present/lang/python');" class="list-group-item" style="background-color :black; color: white; border-radius: 5px;">Python</li><br>
+    <li onclick=" window.open('https://halonex.github.io/Projects/present/lang/java');" class="list-group-item" style="background-color :black; color: white;border-radius: 5px;">Java</li><br>
+    <li class="list-group-item" style="background-color :black; color: white;border-radius: 5px;">Javascript</li><hr>
+    <li class="list-group-item" style="background-color :black; color: white;border-radius: 5px;">C</li><br>
+    <li class="list-group-item" style="background-color :black; color: white;border-radius: 5px;">C++</li>
+  </ul>
+</div>
+  </center>
+      
     </div>
   </div>
   </div>
@@ -143,15 +219,7 @@
      <script src='script.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js'></script><script type="module" src="https://halonex.github.io/Projects/assessment/script.js"></script>
-  <script src="./hl.js"></script>
-  <script>
-      load1();
-      function d(){
-        document.getElementById("er").innerHTML = document.getElementById("t").value;
-        loadl();
-      }
 
-    </script>
   <script>
 
   var elem = document.documentElement;
