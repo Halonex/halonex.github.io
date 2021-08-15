@@ -129,7 +129,7 @@ body{
 
       <div class="content" style = "padding:0px" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
         <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 80vh; width: 100%; font-family: 'Ubuntu Mono', monospace;  "></textarea>
-        <button id="do" onclick="takeshot();emb();" style = "border:none; width: 100%;bottom:0px;">Update</button>
+        <button id="do" onclick="emb();takeshot();" style = "border:none; width: 100%;bottom:0px;">Update</button>
       </div>
     </div>
   </div>
@@ -314,7 +314,6 @@ var canvas = document.getElementById("canvas11");
         document.getElementById('o').appendChild(canvas);
         prep();
         emb();
-        takeshot();
       })
   }
 </script>
@@ -338,7 +337,6 @@ document.body.removeChild( tmpLink );
   
   function emb(){
       document.getElementById("mc").innerHTML = document.getElementById("t").value;
-      emb();
   }
 
   function clickButton() {
@@ -346,7 +344,7 @@ document.body.removeChild( tmpLink );
             btn_element = document.querySelector('#do');
             btn_element.dispatchEvent(click_event);
         }
-        setInterval(clickButton, 3000);
+        setInterval(clickButton, 1000);
 
 </script>
 
