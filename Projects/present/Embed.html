@@ -63,7 +63,7 @@ body{
   text-align: center;
   background :lightgrey;
   border-radius: 8px;
-  width: 520px;
+  width: 500px;
   top: 50px;
   left: 940px;
 
@@ -100,7 +100,7 @@ body{
 
   <div class = "newdiv" >
 
-    <div id="mydiv2" style = "padding : 10px; background : none;">
+    <div id="mydiv2" style = "padding : 0px; background : none;">
       <div id="mydiv2header" >
 
 
@@ -127,7 +127,8 @@ body{
       margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 600px; width : 500px;" id = "win22">
 
       <div class="content" style = "padding:0px">
-        <button id="do" onclick="takeshot();" style = "border:none; width: 100%;bottom:0px;">Update</button>
+        <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 80vh; width: 100%; font-family: 'Ubuntu Mono', monospace;  "></textarea>
+        <button id="do" onclick="takeshot();emb();" style = "border:none; width: 100%;bottom:0px;">Update</button>
       </div>
     </div>
   </div>
@@ -136,10 +137,10 @@ body{
 
 
 
-<div class = "newdiv" >
+<div class = "newdiv" style="visibility:hidden">
 
   <div id="mydiv1" style = "padding : 0px; background : none;">
-    <div id="mydiv1header" >
+    <div id="mydiv1header">
 
 
       <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';"> 
@@ -165,20 +166,20 @@ body{
     margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
     
     <div class="content" style = "padding:0px">
-      <div id = "o" style = "height : 170px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
+      <div id = "o" style = "height : 200px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
       </div>
     </div>
     
   </div>
 </div>
 </div>
-<button id="download" download="Export.jpg" href="" onclick="download_img(this); window.alert('Clicked');" style = "border:none; width: 100%;">Download</button>
+<button id="download" download="Export.jpg" href="" onclick="dd(); window.alert('Clicked');" style = "border:none; width: 100%;">Download</button>
 
 
 
 <div class = "newdiv" >
 
-  <div id="mydiv" style = "padding : 50px; background : none; border : 3px dashed lightgrey">
+  <div id="mydiv" style = "padding : 25px; background : none; border : 3px dashed lightgrey">
     <div id="mydivheader" >
 
 
@@ -201,12 +202,10 @@ body{
 
 
     </div>
-    <div class="window" style="overflow-y: scroll; background-color:#121212;
+    <div class="window" style="overflow-y: scroll;
     margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px;" id = "win00">
     
-    <div class="content" style = "">
-
-    </div>
+    <div class="content" id = "mc" style = "background: white; height:100%;"></div>
   </div>
 </div>
 
@@ -302,47 +301,53 @@ var canvas = document.getElementById("canvas11");
     var canvas = document.getElementById("canvas11");
   }
 
-  download_img = function(el) {
-    var canvas = document.getElementById("canvas11");
-    window.alert('processing');
-    var image = canvas.toDataURL("image/jpg");
-    el.href = image;
-    window.alert('Downloaded');
-  };
-
   function takeshot() {
     let div = document.getElementById('mydiv');
     html2canvas(div).then(
       function (canvas) {
+        var element = document.getElementById("canvas11");
+        element.parentNode.removeChild(element);
         canvas.setAttribute("id", "canvas11");
         document.getElementById('o').innerHTML = "";
         document.getElementById('o').appendChild(canvas);
         prep();
+        emb();
+        takeshot();
       })
   }
 </script>
 
-<script type="text/javascript">
-  var clicked = false, clickX;
-$(document).on({
-    'mousemove': function(e) {
-        clicked && updateScrollPos(e);
-    },
-    'mousedown': function(e) {
-        e.preventDefault();        
-        clicked = true;
-        clickX = e.pageX;
-    },
-    'mouseup': function() {
-        clicked = false;
-        $('html').css('cursor', 'auto');
-    }
-});
 
-var updateScrollPos = function(e) {
-    $('html').css('cursor', 'grabbing');
-    $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
-}
+<script type="text/javascript">
+  function dd(){
+    var canvas1 = document.getElementById("canvas11");
+    var imageData = canvas1.toDataURL("image/jpg")
+    var tmpLink = document.createElement( 'a' );  
+tmpLink.download = 'image.png';
+tmpLink.href = imageData;  
+    
+document.body.appendChild( tmpLink );  
+tmpLink.click();  
+document.body.removeChild( tmpLink );
+  }
+</script>
+
+<script type="text/javascript">
+  
+  function emb(){
+      document.getElementById("mc").innerHTML = document.getElementById("t").value;
+      emb();
+  }
+
+  function clickButton() {
+            click_event = new CustomEvent('click');
+            btn_element = document.querySelector('#do');
+            btn_element.dispatchEvent(click_event);
+        }
+  
+        // Simulate a click every second
+        setInterval(clickButton, 1000);
+
 </script>
 </body>
 </html>
