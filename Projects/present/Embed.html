@@ -1,0 +1,348 @@
+  <!DOCTYPE html>
+
+  <html>
+  <head>
+
+    <script src=
+    "https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+  </script>
+
+
+
+  <style type="text/css">
+  textarea::-webkit-scrollbar {display: none;}
+  div::-webkit-scrollbar {display: none;}
+</style>
+
+
+
+<style>
+body{
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#mydiv {
+  position: absolute;
+  text-align: center;
+  background :black;
+  border-radius: 8px;
+  top: 50px;
+  left: 25px;
+}
+
+#mydivheader {
+  overflow:overflow;
+  cursor:context-menu;
+  color: #fff;
+}
+
+#mydiv1 {
+  position: absolute;
+  text-align: center;
+  background :lightgrey;
+  border-radius: 8px;
+  width: 200px;
+  top: 200px;
+  left: 940px;
+}
+
+#mydiv1header {
+  overflow:overflow;
+  cursor:context-menu;
+  color: #fff;
+
+}
+
+#mydiv2 {
+  position: absolute;
+  text-align: center;
+  background :lightgrey;
+  border-radius: 8px;
+  width: 520px;
+  top: 50px;
+  left: 940px;
+
+}
+
+#mydiv1header {
+  overflow:overflow;
+  cursor:context-menu;
+  color: #fff;
+
+}
+</style>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="https://halonex.github.io/Projects/assessment/resizable-style.css">
+<title>Syntax Highlighter</title>
+
+<script src="https://halonex.github.io/Projects/assessment/resizable.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://halonex.github.io/Projects/assessment/style.css">
+
+<link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./hl.css">
+<link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./style1.css">
+</head>
+
+<body>
+
+  <div class = "newdiv" >
+
+    <div id="mydiv2" style = "padding : 10px; background : none;">
+      <div id="mydiv2header" >
+
+
+        <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
+          <div class="buttons">
+            <div class="close">
+              <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+
+            </div>
+            <div class="minimize">
+              <a class="minimizebutton" onclick="document.getElementById('win22').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+
+            </div>
+            <div class="zoom">
+              <a class="zoombutton" onclick = "document.getElementById('win22').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+            </div>
+          </div>
+          Edit
+        </div>
+
+
+      </div>
+      <div class="window" style="overflow-y: scroll; background-color:white;
+      margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 600px; width : 500px;" id = "win22">
+
+      <div class="content" style = "padding:0px">
+        <button id="do" onclick="takeshot();" style = "border:none; width: 100%;bottom:0px;">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class = "newdiv" >
+
+  <div id="mydiv1" style = "padding : 0px; background : none;">
+    <div id="mydiv1header" >
+
+
+      <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';"> 
+        <div class="buttons">
+          <div class="close">
+            <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+
+          </div>
+          <div class="minimize">
+            <a class="minimizebutton" onclick="document.getElementById('win11').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+
+          </div>
+          <div class="zoom">
+            <a class="zoombutton" onclick = "document.getElementById('win11').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+          </div>
+        </div>
+        Preview
+      </div>
+
+
+    </div>
+    <div class="window" style="overflow-y: scroll; background-color:white;
+    margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
+    
+    <div class="content" style = "padding:0px">
+      <div id = "o" style = "height : 170px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+<button id="download" download="Export.jpg" href="" onclick="download_img(this); window.alert('Clicked');" style = "border:none; width: 100%;">Download</button>
+
+
+
+<div class = "newdiv" >
+
+  <div id="mydiv" style = "padding : 50px; background : none; border : 3px dashed lightgrey">
+    <div id="mydivheader" >
+
+
+      <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '1';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '0';">
+        <div class="buttons">
+          <div class="close">
+            <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+
+          </div>
+          <div class="minimize">
+            <a class="minimizebutton" onclick="document.getElementById('win00').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+
+          </div>
+          <div class="zoom">
+            <a class="zoombutton" onclick = "document.getElementById('win00').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+          </div>
+        </div>
+        Main Screen
+      </div>
+
+
+    </div>
+    <div class="window" style="overflow-y: scroll; background-color:#121212;
+    margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px;" id = "win00">
+    
+    <div class="content" style = "">
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='script.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js'></script><script type="module" src="https://halonex.github.io/Projects/assessment/script.js"></script>
+<script src="./hl.js"></script>
+<script>
+ load1();
+ function d(){
+  document.getElementById("er").innerHTML = document.getElementById("t").value;
+  loadl();
+}
+
+</script>
+<script>
+
+  var elem = document.documentElement;
+
+  function openFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  }
+
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  }
+</script>
+
+
+<script>
+
+  dragElement(document.getElementById("mydiv"));
+  dragElement(document.getElementById("mydiv1"));
+  dragElement(document.getElementById("mydiv2"));
+
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+</script>
+
+<script type="text/javascript">
+var canvas = document.getElementById("canvas11");
+  function prep(){
+    var canvas = document.getElementById("canvas11");
+  }
+
+  download_img = function(el) {
+    var canvas = document.getElementById("canvas11");
+    window.alert('processing');
+    var image = canvas.toDataURL("image/jpg");
+    el.href = image;
+    window.alert('Downloaded');
+  };
+
+  function takeshot() {
+    let div = document.getElementById('mydiv');
+    html2canvas(div).then(
+      function (canvas) {
+        canvas.setAttribute("id", "canvas11");
+        document.getElementById('o').innerHTML = "";
+        document.getElementById('o').appendChild(canvas);
+        prep();
+      })
+  }
+</script>
+
+<script type="text/javascript">
+  var clicked = false, clickX;
+$(document).on({
+    'mousemove': function(e) {
+        clicked && updateScrollPos(e);
+    },
+    'mousedown': function(e) {
+        e.preventDefault();        
+        clicked = true;
+        clickX = e.pageX;
+    },
+    'mouseup': function() {
+        clicked = false;
+        $('html').css('cursor', 'auto');
+    }
+});
+
+var updateScrollPos = function(e) {
+    $('html').css('cursor', 'grabbing');
+    $(window).scrollLeft($(window).scrollLeft() + (clickX - e.pageX));
+}
+</script>
+</body>
+</html>
