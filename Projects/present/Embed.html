@@ -1,215 +1,229 @@
-  <!DOCTYPE html>
+    <!DOCTYPE html>
 
-  <html>
-  <head>
+    <html>
+    <head>
 
-    <script src=
-    "https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
-  </script>
-
-
-
-  <style type="text/css">
-  textarea::-webkit-scrollbar {display: none;}
-  div::-webkit-scrollbar {display: none;}
-</style>
+      <script src=
+      "https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+    </script>
 
 
 
-<style>
-body{
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image:url("https://halonex.github.io/");
-}
-
-#mydiv {
-  position: absolute;
-  text-align: center;
-  background :black;
-  border-radius: 8px;
-  top: 50px;
-  left: 25px;
-}
-
-#mydivheader {
-  overflow:overflow;
-  cursor:context-menu;
-  color: #fff;
-}
-
-#mydiv1 {
-  position: absolute;
-  text-align: center;
-  background :lightgrey;
-  border-radius: 8px;
-  width: 200px;
-  top: 200px;
-  left: 940px;
-}
-
-#mydiv1header {
-  overflow:overflow;
-  cursor:context-menu;
-  color: #fff;
-
-}
-
-#mydiv2 {
-  position: absolute;
-  text-align: center;
-  background :lightgrey;
-  border-radius: 8px;
-  width: 500px;
-  top: 50px;
-  left: 940px;
-
-}
-
-#mydiv1header {
-  overflow:overflow;
-  cursor:context-menu;
-  color: #fff;
-
-}
-</style>
-
-<meta charset="utf-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" type="text/css" href="https://halonex.github.io/Projects/assessment/resizable-style.css">
-<title>Code Editor</title>
-
-<script src="https://halonex.github.io/Projects/assessment/resizable.js"></script>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://halonex.github.io/Projects/assessment/style.css">
-
-<link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./hl.css">
-<link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./style1.css">
-</head>
-
-<body>
-
-  <div class = "newdiv" >
-
-    <div id="mydiv2" style = "padding : 0px; background : none;">
-      <div id="mydiv2header" >
+    <style type="text/css">
+    textarea::-webkit-scrollbar {display: none;}
+    div::-webkit-scrollbar {display: none;}
+  </style>
 
 
-        <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
+
+  <style>
+  body{
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-image:url("https://halonex.github.io/");
+  }
+
+  #mydiv {
+    position: absolute;
+    text-align: center;
+    background :black;
+    border-radius: 8px;
+    top: 50px;
+    left: 25px;
+  }
+
+  #mydivheader {
+    overflow:overflow;
+    cursor:context-menu;
+    color: #fff;
+  }
+
+  #mydiv1 {
+    position: absolute;
+    text-align: center;
+    background :lightgrey;
+    border-radius: 8px;
+    width: 200px;
+    top: 200px;
+    left: 940px;
+  }
+
+  #mydiv1header {
+    overflow:overflow;
+    cursor:context-menu;
+    color: #fff;
+
+  }
+
+  #mydiv2 {
+    position: absolute;
+    text-align: center;
+    background :lightgrey;
+    border-radius: 8px;
+    width: 500px;
+    top: 50px;
+    left: 940px;
+
+  }
+
+  #mydiv1header {
+    overflow:overflow;
+    cursor:context-menu;
+    color: #fff;
+
+  }
+  </style>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="https://halonex.github.io/Projects/assessment/resizable-style.css">
+  <title>Code Editor</title>
+
+  <script src="https://halonex.github.io/Projects/assessment/resizable.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://halonex.github.io/Projects/assessment/style.css">
+
+  <link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./hl.css">
+  <link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/./style1.css">
+  </head>
+
+  <body>
+
+    <div class = "newdiv" >
+
+      <div id="mydiv2" style = "padding : 0px; background : none;">
+        <div id="mydiv2header" >
+
+
+          <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
+            <div class="buttons">
+              <div class="close">
+                <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+
+              </div>
+              <div class="minimize">
+                <a class="minimizebutton" onclick="document.getElementById('win22').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+
+              </div>
+              <div class="zoom">
+                <a class="zoombutton" onclick = "document.getElementById('win22').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+              </div>
+            </div>
+            Edit
+          </div>
+
+
+        </div>
+        <div class="window" style="overflow-y: scroll; background-color:white;
+        margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 600px; width : 500px; " id = "win22" >
+
+        <div class="content" style = "padding:0px" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
+          <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 560px; width: 100%; font-family: 'Ubuntu Mono', monospace;  "></textarea>
+          <div style = "position: sticky; bottom: 0; background-color: white;">
+
+            <div class="row">
+    <div class="col" style="padding-left:30px;">
+      <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked"><p style = "font-size: 9px; margin: 0px;">Auto Preview (disable in case of iframes)</p></label>
+</div>
+    </div>
+    <div class="col" style="padding-right:30px;">
+      <button id="do" onclick="emb();" style = "border: none;width: 100%;">Update</button>
+    </div>
+  </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class = "newdiv" style="visibility:hidden">
+
+    <div id="mydiv1" style = "padding : 0px; background : none;">
+      <div id="mydiv1header">
+
+
+        <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';"> 
           <div class="buttons">
             <div class="close">
               <a class="closebutton" href="#"><span><strong>x</strong></span></a>
 
             </div>
             <div class="minimize">
-              <a class="minimizebutton" onclick="document.getElementById('win22').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+              <a class="minimizebutton" onclick="document.getElementById('win11').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
 
             </div>
             <div class="zoom">
-              <a class="zoombutton" onclick = "document.getElementById('win22').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+              <a class="zoombutton" onclick = "document.getElementById('win11').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
             </div>
           </div>
-          Edit
+          Preview
         </div>
 
 
       </div>
       <div class="window" style="overflow-y: scroll; background-color:white;
-      margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 600px; width : 500px;" id = "win22">
+      margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
+      
+      <div class="content" style = "padding:0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';">
 
-      <div class="content" style = "padding:0px" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
-        <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 80vh; width: 100%; font-family: 'Ubuntu Mono', monospace;  "></textarea>
-        <button id="do" onclick="emb();takeshot();" style = "border:none; width: 100%;bottom:0px;">Update</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class = "newdiv" style="visibility:hidden">
-
-  <div id="mydiv1" style = "padding : 0px; background : none;">
-    <div id="mydiv1header">
-
-
-      <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';"> 
-        <div class="buttons">
-          <div class="close">
-            <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-
-          </div>
-          <div class="minimize">
-            <a class="minimizebutton" onclick="document.getElementById('win11').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
-
-          </div>
-          <div class="zoom">
-            <a class="zoombutton" onclick = "document.getElementById('win11').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
-          </div>
+        <div id = "o" style = "height : 200px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
         </div>
-        Preview
       </div>
-
-
+      
     </div>
-    <div class="window" style="overflow-y: scroll; background-color:white;
-    margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
-    
-    <div class="content" style = "padding:0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';">
-
-      <div id = "o" style = "height : 200px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
-      </div>
-    </div>
-    
   </div>
-</div>
-</div>
-<button id="download" download="Export.jpg" href="" onclick="dd();" style = "background: black; color: white; border:none; width: 100%;">Download</button>
+  </div>
+  <button id="download" download="Export.jpg" href="" onclick="takeshot();" style = "background: black; color: white; border:none; width: 100%;">Download</button>
 
 
+          <button id="do" onclick="emb();" style = "visibility:hidden;">Update</button>
 
-<div class = "newdiv" >
+  <div class = "newdiv" >
 
-  <div id="mydiv" style = "padding : 25px; background : none; border : 3px dashed lightgrey">
-    <div id="mydivheader" >
+    <div id="mydiv" style = "padding : 25px; background : none; border : 3px dashed lightgrey">
+      <div id="mydivheader" >
 
 
-      <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '1';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '0';">
-        <div class="buttons">
-          <div class="close">
-            <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+        <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '1';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '0';">
+          <div class="buttons">
+            <div class="close">
+              <a class="closebutton" href="#"><span><strong>x</strong></span></a>
 
+            </div>
+            <div class="minimize">
+              <a class="minimizebutton" onclick="document.getElementById('win00').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+
+            </div>
+            <div class="zoom">
+              <a class="zoombutton" onclick = "document.getElementById('win00').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+            </div>
           </div>
-          <div class="minimize">
-            <a class="minimizebutton" onclick="document.getElementById('win00').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
-
-          </div>
-          <div class="zoom">
-            <a class="zoombutton" onclick = "document.getElementById('win00').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
-          </div>
+          Main Screen
         </div>
-        Main Screen
+
+
       </div>
-
-
+      <div class="window" style="overflow-y: scroll; box-shadow: 0px 0px 0px;
+      margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px;" id = "win00">
+      
+      <div class="content" id = "mc" style = "background: white; height:100%;" onmousedown ="document.getElementById('mydiv').style.zIndex = '1';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '0'; color: black;"></div>
     </div>
-    <div class="window" style="overflow-y: scroll;
-    margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px;" id = "win00">
-    
-    <div class="content" id = "mc" style = "background: white; height:100%;" onmousedown ="document.getElementById('mydiv').style.zIndex = '1';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '0'; color: black;"></div>
   </div>
-</div>
 
 
 
@@ -217,395 +231,399 @@ body{
 
 
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='script.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js'></script><script type="module" src="https://halonex.github.io/Projects/assessment/script.js"></script>
-<script src="./hl.js"></script>
-<script>
- load1();
- function d(){
-  document.getElementById("er").innerHTML = document.getElementById("t").value;
-  loadl();
-}
-
-</script>
-<script>
-
-  var elem = document.documentElement;
-
-  function openFullscreen() {
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen();
-    }
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='script.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js'></script><script type="module" src="https://halonex.github.io/Projects/assessment/script.js"></script>
+  <script src="./hl.js"></script>
+  <script>
+   load1();
+   function d(){
+    document.getElementById("er").innerHTML = document.getElementById("t").value;
+    loadl();
   }
 
-  function closeFullscreen() {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    }
-  }
-</script>
+  </script>
+  <script>
 
+    var elem = document.documentElement;
 
-<script>
-
-  dragElement(document.getElementById("mydiv"));
-  dragElement(document.getElementById("mydiv1"));
-  dragElement(document.getElementById("mydiv2"));
-
-  function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-      elmnt.onmousedown = dragMouseDown;
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
     }
 
-    function dragMouseDown(e) {
-      e = e || window.event;
-      e.preventDefault();
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.onmousemove = elementDrag;
+    function closeFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+  </script>
+
+
+  <script>
+
+    dragElement(document.getElementById("mydiv"));
+    dragElement(document.getElementById("mydiv1"));
+    dragElement(document.getElementById("mydiv2"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+  var canvas = document.getElementById("canvas11");
+    function prep(){
+      var canvas = document.getElementById("canvas11");
     }
 
-    function elementDrag(e) {
-      e = e || window.event;
-      e.preventDefault();
-      pos1 = pos3 - e.clientX;
-      pos2 = pos4 - e.clientY;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    function takeshot() {
+      let div = document.getElementById('mydiv');
+      html2canvas(div).then(
+        function (canvas) {
+          var element = document.getElementById("canvas11");
+          element.parentNode.removeChild(element);
+          canvas.setAttribute("id", "canvas11");
+          document.getElementById('o').innerHTML = "";
+          document.getElementById('o').appendChild(canvas);
+          prep();
+          dd()
+        })
     }
+  </script>
 
-    function closeDragElement() {
-      document.onmouseup = null;
-      document.onmousemove = null;
+
+  <script type="text/javascript">
+    function dd(){
+      var canvas1 = document.getElementById("canvas11");
+      var imageData = canvas1.toDataURL("image/jpg")
+      var tmpLink = document.createElement( 'a' );  
+  tmpLink.download = 'image.png';
+  tmpLink.href = imageData;  
+      
+  document.body.appendChild( tmpLink );  
+  tmpLink.click();  
+  document.body.removeChild( tmpLink );
     }
-  }
-</script>
+  </script>
 
-<script type="text/javascript">
-var canvas = document.getElementById("canvas11");
-  function prep(){
-    var canvas = document.getElementById("canvas11");
-  }
-
-  function takeshot() {
-    let div = document.getElementById('mydiv');
-    html2canvas(div).then(
-      function (canvas) {
-        var element = document.getElementById("canvas11");
-        element.parentNode.removeChild(element);
-        canvas.setAttribute("id", "canvas11");
-        document.getElementById('o').innerHTML = "";
-        document.getElementById('o').appendChild(canvas);
-        prep();
-        emb();
-      })
-  }
-</script>
-
-
-<script type="text/javascript">
-  function dd(){
-    var canvas1 = document.getElementById("canvas11");
-    var imageData = canvas1.toDataURL("image/jpg")
-    var tmpLink = document.createElement( 'a' );  
-tmpLink.download = 'image.png';
-tmpLink.href = imageData;  
+  <script type="text/javascript">
     
-document.body.appendChild( tmpLink );  
-tmpLink.click();  
-document.body.removeChild( tmpLink );
-  }
-</script>
+    var tim = setInterval(clickButton,1000 );
 
-<script type="text/javascript">
-  
-  function emb(){
-      document.getElementById("mc").innerHTML = document.getElementById("t").value;
+    function emb(){
+        document.getElementById("mc").innerHTML = document.getElementById("t").value;
+    }
+
+    function clickButton() {
+            if (document.getElementById("flexSwitchCheckChecked").checked == '1') {
+              click_event = new CustomEvent('click');
+              btn_element = document.querySelector('#do');
+              btn_element.dispatchEvent(click_event);
+      
+          }}
+          
+
+  </script>
+
+  <script type="text/javascript">
+          "use strict";
+
+  // Minimum resizable area
+  var minWidth = 60;
+  var minHeight = 40;
+
+  // Thresholds
+  var FULLSCREEN_MARGINS = -10;
+  var MARGINS = 4;
+
+  // End of what's configurable.
+  var clicked = null;
+  var onRightEdge, onBottomEdge, onLeftEdge, onTopEdge;
+
+  var rightScreenEdge, bottomScreenEdge;
+
+  var preSnapped;
+
+  var b, x, y;
+
+  var redraw = false;
+
+  var pane = document.getElementById('win00');
+  var ghostpane = document.getElementById('ghostpane');
+
+  function setBounds(element, x, y, w, h) {
+      element.style.left = x + 'px';
+      element.style.top = y + 'px';
+      element.style.width = w + 'px';
+      element.style.height = h + 'px';
   }
 
-  function clickButton() {
-            click_event = new CustomEvent('click');
-            btn_element = document.querySelector('#do');
-            btn_element.dispatchEvent(click_event);
+  function hintHide() {
+    setBounds(ghostpane, b.left, b.top, b.width, b.height);
+    ghostpane.style.opacity = 0;
+  }
+
+
+  // Mouse events
+  pane.addEventListener('mousedown', onMouseDown);
+  document.addEventListener('mousemove', onMove);
+  document.addEventListener('mouseup', onUp);
+
+  // Touch events 
+  pane.addEventListener('touchstart', onTouchDown);
+  document.addEventListener('touchmove', onTouchMove);
+  document.addEventListener('touchend', onTouchEnd);
+
+
+  function onTouchDown(e) {
+    onDown(e.touches[0]);
+    e.preventDefault();
+  }
+
+  function onTouchMove(e) {
+    onMove(e.touches[0]);     
+  }
+
+  function onTouchEnd(e) {
+    if (e.touches.length ==0) onUp(e.changedTouches[0]);
+  }
+
+  function onMouseDown(e) {
+    onDown(e);
+    e.preventDefault();
+  }
+
+  function onDown(e) {
+    calc(e);
+
+    var isResizing = onRightEdge || onBottomEdge || onTopEdge || onLeftEdge;
+
+    clicked = {
+      x: x,
+      y: y,
+      cx: e.clientX,
+      cy: e.clientY,
+      w: b.width,
+      h: b.height,
+      isResizing: isResizing,
+      isMoving: !isResizing && canMove(),
+      onTopEdge: onTopEdge,
+      onLeftEdge: onLeftEdge,
+      onRightEdge: onRightEdge,
+      onBottomEdge: onBottomEdge
+    };
+  }
+
+  function canMove() {
+    return x > 0 && x < b.width && y > 0 && y < b.height
+    && y < 30;
+  }
+
+  function calc(e) {
+    b = pane.getBoundingClientRect();
+    x = e.clientX - b.left;
+    y = e.clientY - b.top;
+
+    onTopEdge = y < MARGINS;
+    onLeftEdge = x < MARGINS;
+    onRightEdge = x >= b.width - MARGINS;
+    onBottomEdge = y >= b.height - MARGINS;
+
+    rightScreenEdge = window.innerWidth - MARGINS;
+    bottomScreenEdge = window.innerHeight - MARGINS;
+  }
+
+  var e;
+
+  function onMove(ee) {
+    calc(ee);
+
+    e = ee;
+
+    redraw = true;
+
+  }
+
+  function animate() {
+
+    requestAnimationFrame(animate);
+
+    if (!redraw) return;
+
+    redraw = false;
+
+    if (clicked && clicked.isResizing) {
+
+      if (clicked.onRightEdge) pane.style.width = Math.max(x, minWidth) + 'px';
+      if (clicked.onBottomEdge) pane.style.height = Math.max(y, minHeight) + 'px';
+
+      if (clicked.onLeftEdge) {
+        var currentWidth = Math.max(clicked.cx - e.clientX  + clicked.w, minWidth);
+        if (currentWidth > minWidth) {
+          pane.style.width = currentWidth + 'px';
+          pane.style.left = e.clientX + 'px'; 
         }
-        setInterval(clickButton, 1000);
-
-</script>
-
-<script type="text/javascript">
-        "use strict";
-
-// Minimum resizable area
-var minWidth = 60;
-var minHeight = 40;
-
-// Thresholds
-var FULLSCREEN_MARGINS = -10;
-var MARGINS = 4;
-
-// End of what's configurable.
-var clicked = null;
-var onRightEdge, onBottomEdge, onLeftEdge, onTopEdge;
-
-var rightScreenEdge, bottomScreenEdge;
-
-var preSnapped;
-
-var b, x, y;
-
-var redraw = false;
-
-var pane = document.getElementById('win00');
-var ghostpane = document.getElementById('ghostpane');
-
-function setBounds(element, x, y, w, h) {
-    element.style.left = x + 'px';
-    element.style.top = y + 'px';
-    element.style.width = w + 'px';
-    element.style.height = h + 'px';
-}
-
-function hintHide() {
-  setBounds(ghostpane, b.left, b.top, b.width, b.height);
-  ghostpane.style.opacity = 0;
-}
-
-
-// Mouse events
-pane.addEventListener('mousedown', onMouseDown);
-document.addEventListener('mousemove', onMove);
-document.addEventListener('mouseup', onUp);
-
-// Touch events 
-pane.addEventListener('touchstart', onTouchDown);
-document.addEventListener('touchmove', onTouchMove);
-document.addEventListener('touchend', onTouchEnd);
-
-
-function onTouchDown(e) {
-  onDown(e.touches[0]);
-  e.preventDefault();
-}
-
-function onTouchMove(e) {
-  onMove(e.touches[0]);     
-}
-
-function onTouchEnd(e) {
-  if (e.touches.length ==0) onUp(e.changedTouches[0]);
-}
-
-function onMouseDown(e) {
-  onDown(e);
-  e.preventDefault();
-}
-
-function onDown(e) {
-  calc(e);
-
-  var isResizing = onRightEdge || onBottomEdge || onTopEdge || onLeftEdge;
-
-  clicked = {
-    x: x,
-    y: y,
-    cx: e.clientX,
-    cy: e.clientY,
-    w: b.width,
-    h: b.height,
-    isResizing: isResizing,
-    isMoving: !isResizing && canMove(),
-    onTopEdge: onTopEdge,
-    onLeftEdge: onLeftEdge,
-    onRightEdge: onRightEdge,
-    onBottomEdge: onBottomEdge
-  };
-}
-
-function canMove() {
-  return x > 0 && x < b.width && y > 0 && y < b.height
-  && y < 30;
-}
-
-function calc(e) {
-  b = pane.getBoundingClientRect();
-  x = e.clientX - b.left;
-  y = e.clientY - b.top;
-
-  onTopEdge = y < MARGINS;
-  onLeftEdge = x < MARGINS;
-  onRightEdge = x >= b.width - MARGINS;
-  onBottomEdge = y >= b.height - MARGINS;
-
-  rightScreenEdge = window.innerWidth - MARGINS;
-  bottomScreenEdge = window.innerHeight - MARGINS;
-}
-
-var e;
-
-function onMove(ee) {
-  calc(ee);
-
-  e = ee;
-
-  redraw = true;
-
-}
-
-function animate() {
-
-  requestAnimationFrame(animate);
-
-  if (!redraw) return;
-
-  redraw = false;
-
-  if (clicked && clicked.isResizing) {
-
-    if (clicked.onRightEdge) pane.style.width = Math.max(x, minWidth) + 'px';
-    if (clicked.onBottomEdge) pane.style.height = Math.max(y, minHeight) + 'px';
-
-    if (clicked.onLeftEdge) {
-      var currentWidth = Math.max(clicked.cx - e.clientX  + clicked.w, minWidth);
-      if (currentWidth > minWidth) {
-        pane.style.width = currentWidth + 'px';
-        pane.style.left = e.clientX + 'px'; 
       }
-    }
 
-    if (clicked.onTopEdge) {
-      var currentHeight = Math.max(clicked.cy - e.clientY  + clicked.h, minHeight);
-      if (currentHeight > minHeight) {
-        pane.style.height = currentHeight + 'px';
-        pane.style.top = e.clientY + 'px';  
+      if (clicked.onTopEdge) {
+        var currentHeight = Math.max(clicked.cy - e.clientY  + clicked.h, minHeight);
+        if (currentHeight > minHeight) {
+          pane.style.height = currentHeight + 'px';
+          pane.style.top = e.clientY + 'px';  
+        }
       }
-    }
 
-    hintHide();
-
-    return;
-  }
-
-  if (clicked && clicked.isMoving) {
-
-    if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
-      // hintFull();
-      setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight);
-      ghostpane.style.opacity = 0.2;
-    } else if (b.top < MARGINS) {
-      // hintTop();
-      setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight / 2);
-      ghostpane.style.opacity = 0.2;
-    } else if (b.left < MARGINS) {
-      // hintLeft();
-      setBounds(ghostpane, 0, 0, window.innerWidth / 2, window.innerHeight);
-      ghostpane.style.opacity = 0.2;
-    } else if (b.right > rightScreenEdge) {
-      // hintRight();
-      setBounds(ghostpane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
-      ghostpane.style.opacity = 0.2;
-    } else if (b.bottom > bottomScreenEdge) {
-      // hintBottom();
-      setBounds(ghostpane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
-      ghostpane.style.opacity = 0.2;
-    } else {
       hintHide();
-    }
 
-    if (preSnapped) {
-      setBounds(pane,
-        e.clientX - preSnapped.width / 2,
-        e.clientY - Math.min(clicked.y, preSnapped.height),
-        preSnapped.width,
-        preSnapped.height
-      );
       return;
     }
 
-    // moving
-    pane.style.top = (e.clientY - clicked.y) + 'px';
-    pane.style.left = (e.clientX - clicked.x) + 'px';
+    if (clicked && clicked.isMoving) {
 
-    return;
-  }
+      if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
+        // hintFull();
+        setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight);
+        ghostpane.style.opacity = 0.2;
+      } else if (b.top < MARGINS) {
+        // hintTop();
+        setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight / 2);
+        ghostpane.style.opacity = 0.2;
+      } else if (b.left < MARGINS) {
+        // hintLeft();
+        setBounds(ghostpane, 0, 0, window.innerWidth / 2, window.innerHeight);
+        ghostpane.style.opacity = 0.2;
+      } else if (b.right > rightScreenEdge) {
+        // hintRight();
+        setBounds(ghostpane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
+        ghostpane.style.opacity = 0.2;
+      } else if (b.bottom > bottomScreenEdge) {
+        // hintBottom();
+        setBounds(ghostpane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
+        ghostpane.style.opacity = 0.2;
+      } else {
+        hintHide();
+      }
 
-  // This code executes when mouse moves without clicking
+      if (preSnapped) {
+        setBounds(pane,
+          e.clientX - preSnapped.width / 2,
+          e.clientY - Math.min(clicked.y, preSnapped.height),
+          preSnapped.width,
+          preSnapped.height
+        );
+        return;
+      }
 
-  // style cursor
-  if (onRightEdge && onBottomEdge || onLeftEdge && onTopEdge) {
-    pane.style.cursor = 'nwse-resize';
-  } else if (onRightEdge && onTopEdge || onBottomEdge && onLeftEdge) {
-    pane.style.cursor = 'nesw-resize';
-  } else if (onRightEdge || onLeftEdge) {
-    pane.style.cursor = 'ew-resize';
-  } else if (onBottomEdge || onTopEdge) {
-    pane.style.cursor = 'ns-resize';
-  } else if (canMove()) {
-    pane.style.cursor = 'move';
-  } else {
-    pane.style.cursor = 'default';
-  }
-}
+      // moving
+      pane.style.top = (e.clientY - clicked.y) + 'px';
+      pane.style.left = (e.clientX - clicked.x) + 'px';
 
-animate();
-
-function onUp(e) {
-  calc(e);
-
-  if (clicked && clicked.isMoving) {
-    // Snap
-    var snapped = {
-      width: b.width,
-      height: b.height
-    };
-
-    if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
-      // hintFull();
-      setBounds(pane, 0, 0, window.innerWidth, window.innerHeight);
-      preSnapped = snapped;
-    } else if (b.top < MARGINS) {
-      // hintTop();
-      setBounds(pane, 0, 0, window.innerWidth, window.innerHeight / 2);
-      preSnapped = snapped;
-    } else if (b.left < MARGINS) {
-      // hintLeft();
-      setBounds(pane, 0, 0, window.innerWidth / 2, window.innerHeight);
-      preSnapped = snapped;
-    } else if (b.right > rightScreenEdge) {
-      // hintRight();
-      setBounds(pane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
-      preSnapped = snapped;
-    } else if (b.bottom > bottomScreenEdge) {
-      // hintBottom();
-      setBounds(pane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
-      preSnapped = snapped;
-    } else {
-      preSnapped = null;
+      return;
     }
 
-    hintHide();
+    // This code executes when mouse moves without clicking
+
+    // style cursor
+    if (onRightEdge && onBottomEdge || onLeftEdge && onTopEdge) {
+      pane.style.cursor = 'nwse-resize';
+    } else if (onRightEdge && onTopEdge || onBottomEdge && onLeftEdge) {
+      pane.style.cursor = 'nesw-resize';
+    } else if (onRightEdge || onLeftEdge) {
+      pane.style.cursor = 'ew-resize';
+    } else if (onBottomEdge || onTopEdge) {
+      pane.style.cursor = 'ns-resize';
+    } else if (canMove()) {
+      pane.style.cursor = 'move';
+    } else {
+      pane.style.cursor = 'default';
+    }
+  }
+
+  animate();
+
+  function onUp(e) {
+    calc(e);
+
+    if (clicked && clicked.isMoving) {
+      // Snap
+      var snapped = {
+        width: b.width,
+        height: b.height
+      };
+
+      if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
+        // hintFull();
+        setBounds(pane, 0, 0, window.innerWidth, window.innerHeight);
+        preSnapped = snapped;
+      } else if (b.top < MARGINS) {
+        // hintTop();
+        setBounds(pane, 0, 0, window.innerWidth, window.innerHeight / 2);
+        preSnapped = snapped;
+      } else if (b.left < MARGINS) {
+        // hintLeft();
+        setBounds(pane, 0, 0, window.innerWidth / 2, window.innerHeight);
+        preSnapped = snapped;
+      } else if (b.right > rightScreenEdge) {
+        // hintRight();
+        setBounds(pane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
+        preSnapped = snapped;
+      } else if (b.bottom > bottomScreenEdge) {
+        // hintBottom();
+        setBounds(pane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
+        preSnapped = snapped;
+      } else {
+        preSnapped = null;
+      }
+
+      hintHide();
+
+    }
+
+    clicked = null;
 
   }
 
-  clicked = null;
-
-}
-
-    </script>
-</body>
-</html>
+      </script>
+  </body>
+  </html>
