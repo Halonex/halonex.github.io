@@ -131,161 +131,161 @@
         <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 560px; width: 100%; font-family: 'Ubuntu Mono', monospace;  ">
 
           <style>
-        :root {
-          --stripe-size: 100px;
-          --color1: #24bdf0;
-          --color2: #313131;
-          --duration: 2s;
-        }
+          :root {
+            --stripe-size: 100px;
+            --color1: #24bdf0;
+            --color2: #313131;
+            --duration: 2s;
+          }
 
-        body {
-          display: flex;
-          height: 100vh;
-          overflow: hidden;
-        }
+          body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+          }
 
-        .stripe {
-         
-          display: flex;
-          width: 100%;
-          height: 100%;
-        }
-        .stripe_inner {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          font-size: 8rem;
-          font-family: "Anton", sans-serif;
-          color: rgba(255, 255, 255, 0);
-          background: repeating-linear-gradient(45deg, var(--color1) 25%, var(--color1) 50%, var(--color2) 50%, var(--color2) 75%);
-          background-size: var(--stripe-size) var(--stripe-size);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-animation: stripeBackgroundPosition var(--duration) linear infinite;
-          animation: stripeBackgroundPosition var(--duration) linear infinite;
-        }
-        .stripe::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: calc(100% + var(--stripe-size));
-          height: 100%;
-          background: repeating-linear-gradient(45deg, var(--color2) 25%, var(--color2) 50%, var(--color1) 50%, var(--color1) 75%);
-          background-size: var(--stripe-size) var(--stripe-size);
-          -webkit-animation: stripeTransform var(--duration) linear infinite;
-          animation: stripeTransform var(--duration) linear infinite;
-        }
+          .stripe {
+           
+            display: flex;
+            width: 100%;
+            height: 100%;
+          }
+          .stripe_inner {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 8rem;
+            font-family: "Anton", sans-serif;
+            color: rgba(255, 255, 255, 0);
+            background: repeating-linear-gradient(45deg, var(--color1) 25%, var(--color1) 50%, var(--color2) 50%, var(--color2) 75%);
+            background-size: var(--stripe-size) var(--stripe-size);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-animation: stripeBackgroundPosition var(--duration) linear infinite;
+            animation: stripeBackgroundPosition var(--duration) linear infinite;
+          }
+          .stripe::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% + var(--stripe-size));
+            height: 100%;
+            background: repeating-linear-gradient(45deg, var(--color2) 25%, var(--color2) 50%, var(--color1) 50%, var(--color1) 75%);
+            background-size: var(--stripe-size) var(--stripe-size);
+            -webkit-animation: stripeTransform var(--duration) linear infinite;
+            animation: stripeTransform var(--duration) linear infinite;
+          }
 
-        @-webkit-keyframes stripeTransform {
-          0% {
-            transform: translateX(0);
+          @-webkit-keyframes stripeTransform {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(var(--stripe-size) * -1));
+            }
           }
-          100% {
-            transform: translateX(calc(var(--stripe-size) * -1));
-          }
-        }
 
-        @keyframes stripeTransform {
-          0% {
-            transform: translateX(0);
+          @keyframes stripeTransform {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(var(--stripe-size) * -1));
+            }
           }
-          100% {
-            transform: translateX(calc(var(--stripe-size) * -1));
+          @-webkit-keyframes stripeBackgroundPosition {
+            0% {
+              background-position: 0 0;
+            }
+            100% {
+              background-position: calc(var(--stripe-size) * -1) 0;
+            }
           }
-        }
-        @-webkit-keyframes stripeBackgroundPosition {
-          0% {
-            background-position: 0 0;
+          @keyframes stripeBackgroundPosition {
+            0% {
+              background-position: 0 0;
+            }
+            100% {
+              background-position: calc(var(--stripe-size) * -1) 0;
+            }
           }
-          100% {
-            background-position: calc(var(--stripe-size) * -1) 0;
-          }
-        }
-        @keyframes stripeBackgroundPosition {
-          0% {
-            background-position: 0 0;
-          }
-          100% {
-            background-position: calc(var(--stripe-size) * -1) 0;
-          }
-        }
-      </style>
-      <defaultwindow>
-<hr>
-        <div class="stripe_inner">
-          Halonex 
-          <p style = "font-size : 14px;"><br><br>Team LOF</p>
-        </div>
-        <hr>
+        </style>
+        <defaultwindow>
+          <hr>
+          <div class="stripe_inner">
+            Halonex 
+            <p style = "font-size : 14px;"><br><br>Team LOF</p>
+          </div>
+          <hr>
 
-        <div style = " background:#24bdf0; height : 100%; padding : 100px;">
-          <br>
-          <button style = "width :100px; height : 50px;font-size : 10px; float : center; background:#24bdf0; border-width: 3px; border-color: white; border-style: solid; color : white" onclick="cl();">Get Started</button></div>
-      </div>
-        <p style="position:sticky; bottom: 0px; color:white; font-size: 11px; float: left; padding-left: 20px;">For documentation and information abour features, visit halonex.github.io </p>
-      
-      </textarea>
-      <div style = "position: sticky; bottom: 0; background-color: white;">
+          <div style = " background:#24bdf0; height : 100%; padding : 100px;">
+            <br>
+            <button style = "width :100px; height : 50px;font-size : 10px; float : center; background:#24bdf0; border-width: 3px; border-color: white; border-style: solid; color : white" onclick="cl();">Get Started</button></div>
+          </div>
+          <p style="position:sticky; bottom: 0px; color:white; font-size: 11px; float: left; padding-left: 20px;">For documentation and information abour features, visit halonex.github.io </p>
+          
+        </textarea>
+        <div style = "position: sticky; bottom: 0; background-color: white;">
 
-        <div class="row">
-          <div class="col" style="padding-left:30px;">
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-              <label class="form-check-label" for="flexSwitchCheckChecked"><p style = "font-size: 9px; margin: 0px;">Auto Preview (disable in case of iframes)</p></label>
+          <div class="row">
+            <div class="col" style="padding-left:30px;">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked"><p style = "font-size: 9px; margin: 0px;">Auto Preview (disable in case of iframes)</p></label>
+              </div>
+            </div>
+            <div class="col" style="padding-right:30px;">
+              <button id="do" onclick="emb();" style = "border: 2px black;width: 100%;">Update</button>
             </div>
           </div>
-          <div class="col" style="padding-right:30px;">
-            <button id="do" onclick="emb();" style = "border: 2px black;width: 100%;">Update</button>
-          </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
 
-<div class = "newdiv" style="visibility:hidden">
+  <div class = "newdiv" style="visibility:hidden">
 
-  <div id="mydiv1" style = "padding : 0px; background : none;">
-    <div id="mydiv1header">
+    <div id="mydiv1" style = "padding : 0px; background : none;">
+      <div id="mydiv1header">
 
 
-      <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';"> 
-        <div class="buttons">
-          <div class="close">
-            <a class="closebutton" href="#"><span><strong>x</strong></span></a>
+        <div class="titlebar" style="position: sticky;top: 0px;left: 0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';"> 
+          <div class="buttons">
+            <div class="close">
+              <a class="closebutton" href="#"><span><strong>x</strong></span></a>
 
+            </div>
+            <div class="minimize">
+              <a class="minimizebutton" onclick="document.getElementById('win11').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
+
+            </div>
+            <div class="zoom">
+              <a class="zoombutton" onclick = "document.getElementById('win11').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
+            </div>
           </div>
-          <div class="minimize">
-            <a class="minimizebutton" onclick="document.getElementById('win11').style.display = 'none';" href="#"><span><strong>&ndash;</strong></span></a>
-
-          </div>
-          <div class="zoom">
-            <a class="zoombutton" onclick = "document.getElementById('win11').style.display = 'block';" href="#"><span><strong>+</strong></span></a>
-          </div>
+          Preview
         </div>
-        Preview
+
+
+      </div>
+      <div class="window" style="overflow-y: scroll; background-color:white;
+      margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
+
+      <div class="content" style = "padding:0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';">
+
+        <div id = "o" style = "height : 200px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
+        </div>
       </div>
 
-
     </div>
-    <div class="window" style="overflow-y: scroll; background-color:white;
-    margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
-
-    <div class="content" style = "padding:0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';">
-
-      <div id = "o" style = "height : 200px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
-      </div>
-    </div>
-
   </div>
-</div>
 </div>
 <button id="download" download="Export.jpg" href="" onclick="takeshot();" style = "background: black; color: white; border:none; width: 100%;">Download</button>
 
