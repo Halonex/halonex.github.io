@@ -128,7 +128,9 @@
       margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 600px; width : 500px; " id = "win22" >
 
       <div class="content" style = "padding:0px" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '1';">
-        <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 560px; width: 100%; font-family: 'Ubuntu Mono', monospace;  "><style>
+        <textarea id="t" style="background-color: #1F1B24; color : white; padding: 10px; height: 560px; width: 100%; font-family: 'Ubuntu Mono', monospace;  ">
+
+          <style>
         :root {
           --stripe-size: 100px;
           --color1: #24bdf0;
@@ -212,11 +214,19 @@
         }
       </style>
       <defaultwindow>
-
-        <div class="stripe_inner">Halonex <p style = "font-size : 14px;"><br><br>Team LOF</p>
+<hr>
+        <div class="stripe_inner">
+          Halonex 
+          <p style = "font-size : 14px;"><br><br>Team LOF</p>
         </div>
-        <div style = " background:#24bdf0; height : 100%; padding : 100px;"><br><button style = "width :100px; height : 50px;font-size : 10px; float : center; background:#24bdf0; border-width: 3px; border-color: white; border-style: solid; color : white" onclick="cl();">Get Started</button></div></div>
+        <hr>
+
+        <div style = " background:#24bdf0; height : 100%; padding : 100px;">
+          <br>
+          <button style = "width :100px; height : 50px;font-size : 10px; float : center; background:#24bdf0; border-width: 3px; border-color: white; border-style: solid; color : white" onclick="cl();">Get Started</button></div>
+      </div>
         <p style="position:sticky; bottom: 0px; color:white; font-size: 11px; float: left; padding-left: 20px;">For documentation and information abour features, visit halonex.github.io </p>
+      
       </textarea>
       <div style = "position: sticky; bottom: 0; background-color: white;">
 
@@ -231,7 +241,7 @@
             <button id="do" onclick="emb();" style = "border: 2px black;width: 100%;">Update</button>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -267,13 +277,13 @@
     </div>
     <div class="window" style="overflow-y: scroll; background-color:white;
     margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px; height : 200px; width : 200px;" id = "win11">
-    
+
     <div class="content" style = "padding:0px;" onmousedown ="document.getElementById('mydiv').style.zIndex = '0';document.getElementById('mydiv1').style.zIndex = '1';document.getElementById('mydiv2').style.zIndex = '0';">
 
       <div id = "o" style = "height : 200px; width : 200px; background-color : white; overflow:scroll;"><canvas id = "canvas11"></canvas> 
       </div>
     </div>
-    
+
   </div>
 </div>
 </div>
@@ -309,7 +319,7 @@
     </div>
     <div class="window" style="overflow-y: scroll; box-shadow: 0px 0px 0px;
     margin-top: 0px; translate-y = 10px; border-top-left-radius: 0px;border-top-right-radius: 0px;" id = "win00">
-    
+
     <div class="content" id = "mc" style = "background: white; height:100%;" onmousedown ="document.getElementById('mydiv').style.zIndex = '1';document.getElementById('mydiv1').style.zIndex = '0';document.getElementById('mydiv2').style.zIndex = '0'; color: black;"></div>
   </div>
 </div>
@@ -435,7 +445,7 @@
     var tmpLink = document.createElement( 'a' );  
     tmpLink.download = 'image.png';
     tmpLink.href = imageData;  
-    
+
     document.body.appendChild( tmpLink );  
     tmpLink.click();  
     document.body.removeChild( tmpLink );
@@ -448,7 +458,7 @@
   btn_element = document.querySelector('#do');
   btn_element.dispatchEvent(click_event);
 
-  
+
   var tim = setInterval(clickButton,1000 );
 
   function emb(){
@@ -462,7 +472,7 @@
       btn_element.dispatchEvent(click_event);
       
     }}
-    
+
 
   </script>
 
