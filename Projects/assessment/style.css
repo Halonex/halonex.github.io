@@ -3,23 +3,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: #efefef;
-  font-weight: normal;
-  font-weight: 300;
-  margin-bottom: 30px;
-}
-h1 a {
-  color: #efefef;
-  border-bottom: 2px solid #efefef;
-  text-decoration: none;
-  padding-bottom: 3px;
-}
-h1 a:hover {
-  color: yellowgreen;
-  border-color: yellowgreen;
-}
-
 #list {
   background-color: rgba(0, 0, 0, 0.2);
   margin-top: 50px;
@@ -35,8 +18,6 @@ h1 a:hover {
   font-weight: bold;
   border-color: yellowgreen;
 }
-
-/* mine below */
 
 .tile {
   clear: both;

@@ -1,17 +1,9 @@
 @charset "UTF-8";
-/* ©2015 Johannes Jakob
-   Made with <3 in Germany */
-
    
 body {
   background: #ecf0f1;
   color: #000;
   font-family: HelveticaNeue, "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-}
-
-/* window BEGIN */
-a {
-  text-decoration: none;
 }
 
 span {
@@ -150,14 +142,3 @@ span {
 .content {
   padding: 10px;
 }
-
-/* window END */
-/* content BEGIN */
-h3 {
-  margin-top: 0px;
-}
-
-/* content END */
-
-
-
