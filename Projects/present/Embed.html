@@ -471,8 +471,6 @@
   function clickButton() {
     if (document.getElementById("t").value.includes("iframe")) {
       document.getElementById("flexSwitchCheckChecked").checked = false;
-    }else{
-      document.getElementById("flexSwitchCheckChecked").checked = true;
     }
     if (document.getElementById("flexSwitchCheckChecked").checked == '1' && !(document.getElementById("t").value.includes("<defaultwindow>"))) {
       click_event = new CustomEvent('click');
