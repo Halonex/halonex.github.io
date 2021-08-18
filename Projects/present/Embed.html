@@ -237,8 +237,11 @@
                 <label class="form-check-label" for="flexSwitchCheckChecked"><p style = "font-size: 9px; margin: 0px;">Auto Preview (disable in case of iframes)</p></label>
               </div>
             </div>
-            <div class="col" style="padding-right:30px;">
+            <div class="col" >
               <button id="do" onclick="emb();" style = "border: 2px black;width: 100%;">Update</button>
+            </div>
+            <div class="col" style="padding-right: 30px;">
+              <input type="button" id="bt" value="Save" onclick="saveFile()" style="border: none; width: 100%;" />
             </div>
           </div>
 
@@ -466,6 +469,11 @@
   }
 
   function clickButton() {
+    if (document.getElementById("t").value.includes("iframe")) {
+      document.getElementById("flexSwitchCheckChecked").checked = false;
+    }else{
+      document.getElementById("flexSwitchCheckChecked").checked = true;
+    }
     if (document.getElementById("flexSwitchCheckChecked").checked == '1' && !(document.getElementById("t").value.includes("<defaultwindow>"))) {
       click_event = new CustomEvent('click');
       btn_element = document.querySelector('#do');
@@ -632,23 +640,23 @@
     if (clicked && clicked.isMoving) {
 
       if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
-        // hintFull();
+      
         setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight);
         ghostpane.style.opacity = 0.2;
       } else if (b.top < MARGINS) {
-        // hintTop();
+      
         setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight / 2);
         ghostpane.style.opacity = 0.2;
       } else if (b.left < MARGINS) {
-        // hintLeft();
+  
         setBounds(ghostpane, 0, 0, window.innerWidth / 2, window.innerHeight);
         ghostpane.style.opacity = 0.2;
       } else if (b.right > rightScreenEdge) {
-        // hintRight();
+    
         setBounds(ghostpane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
         ghostpane.style.opacity = 0.2;
       } else if (b.bottom > bottomScreenEdge) {
-        // hintBottom();
+
         setBounds(ghostpane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
         ghostpane.style.opacity = 0.2;
       } else {
@@ -672,9 +680,6 @@
       return;
     }
 
-    // This code executes when mouse moves without clicking
-
-    // style cursor
     if (onRightEdge && onBottomEdge || onLeftEdge && onTopEdge) {
       pane.style.cursor = 'nwse-resize';
     } else if (onRightEdge && onTopEdge || onBottomEdge && onLeftEdge) {
@@ -735,5 +740,33 @@
   }
 
 </script>
+
+
+<script>
+    let saveFile = () => {
+        
+        let data = 
+           '<!DOCTYPE html><html><head><link rel="import" href="https://halonex.github.io/Projects/present/m-OSwebTemp.html"><meta charset="utf-8"><title></title></head><body><div>' + document.getElementById("t").value + "</div></body></html>";
+        
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.html';   
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
+
+
 </body>
 </html>
