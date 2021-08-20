@@ -98,7 +98,7 @@
 <link rel="stylesheet" href="https://halonex.github.io/Projects/present/lang/style1.css">
 </head>
 
-<body id = "b1">
+<body id = "b1" onload="check11();">
 
 <button type="button" class="btn btn-primary">
 </button>
@@ -752,6 +752,13 @@
     }
 </script>
 
+<script type="text/javascript">
+    function check11(){
+        if($(window).width() < 750){
+            window.location = "https://halonex.github.io/mobile"
+        }
+    };
+</script>
 
 </body>
 </html>
