@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>Presentation Tools</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size: 16px;
+background-image:url('https://halonex.github.io/src/2.png') ;
+background-size: 100% ;}
+::-webkit-scrollbar {
+    display: none;
+}
+img {margin-bottom: -8px;}
+.mySlides {display: none;}
+</style>
+<body ondrag ="document.documentElement.requestFullscreen();" style="user-select: none; ">
+  <nav class="navbar navbar-dark" style="z-index: 2;position: absolute;top: 10px;background: black; width:100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://halonex.github.io/src/1.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      Halonex Present
+    </a>
+  </div>
+</nav>
+
+<header class="w3-display-container w3-center" style="background:none;padding:0px;">
+  <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('download').style.display='block'" style="display:block;">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button>
+  <div class="mySlides w3-animate-opacity" style="padding:0px;">
+    <img class="front" src="https://halonex.github.io/src/3.png" alt="halonex" style="min-width:500px; width: 100%;background-size: fill;">
+  </div>
+    <div class=" w3-padding w3-hide-small" style="width:100%">
+      <div class="w3-black w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge">Added Functionalities with our app</h1>
+        <hr class="w3-opacity">
+        <p>Under Development : join as beta tester</p>
+        <p><button class="w3-button w3-block w3-green w3-round" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button></p>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+</header>
+
+<div class="w3-padding-64 w3-center w3-white" style="padding:100px;">
+  <h1 class="w3-jumbo"><b>Tools</b></h1>
+  <p class="w3-large">Launch directly in your browser - no Downloads</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half w3-section">
+      <ul class="w3-ul w3-card w3-hover-shadow">
+        <li class="w3-padding-16">
+          <h2 class="w3-opacity">RW Sites</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large" onclick="window.location.href='https://halonex.github.io/Projects/present/Embed'"><i class="fa fa-server"></i> Create</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-half w3-section">
+      <ul class="w3-ul w3-card w3-hover-shadow">
+        <li class="w3-padding-16">
+          <h2 class="w3-opacity">Highlighters</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large" onclick="window.location.href='https://halonex.github.io/Projects/present/d-create'"> <i class="fa fa-server"></i> Visit</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br>
+</div>
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
+  <div class="w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p class="w3-medium">developed by <a href="https://loflabs.com" target="_blank" class="w3-hover-text-green">Team LOF</a></p>
+</footer>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+<script type="text/javascript">
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  const checkpoint = 300;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= checkpoint) {
+    opacity = 1 - currentScroll / checkpoint;
+  } else {
+    opacity = 0;
+  }
+  document.querySelector(".front").style.opacity = opacity;
+});
+
+</script>
+
+</body>
+</html>
