@@ -433,7 +433,6 @@ body, html {
 
 <div id="About" class="tabcontent" >
   <button onclick="update();" id="do">Update</button>
-  <button  onclick="update();" style = "border: 2px black;width: 100%;">Update</button>
 </div>
     </div>
 
@@ -475,11 +474,13 @@ body, html {
 			</main>
     </div>
 </div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script type="text/javascript">
+
 	function update(){
 		document.getElementById("mainmobilescreen").innerHTML = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
+		writeUserData("userId",document.getElementById("t1").value, document.getElementById("t2").value,document.getElementById("t3").value);
 	}
-
 </script>
 		
 			<script>
@@ -552,23 +553,21 @@ document.getElementById("defaultOpen").click();
 		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
 		<script>
-	  var firebaseConfig = {
-	  	apiKey: "AIzaSyDXAZU-U5VLwRdp-CEPuLubO1tJ996cbTo",
-	  	authDomain: "halonex-companion.firebaseapp.com",
-	  	databaseURL: "https://halonex-companion-default-rtdb.asia-southeast1.firebasedatabase.app",
-	  	projectId: "halonex-companion",
-	  	storageBucket: "halonex-companion.appspot.com",
-	  	messagingSenderId: "339446753160",
-	  	appId: "1:339446753160:web:32a6a61a3ee0065cd5fc3d",
-	  	measurementId: "G-6J7ZEE5YKJ"
+	  	var firebaseConfig = {
+	  	apiKey: "AIzaSyCy89ifV9bScL0PLP47RXbSKFirVwineyo",
+    	authDomain: "halonex-companion-usa.firebaseapp.com",
+    	databaseURL: "https://halonex-companion-usa-default-rtdb.firebaseio.com",
+    	projectId: "halonex-companion-usa",
+    	storageBucket: "halonex-companion-usa.appspot.com",
+    	messagingSenderId: "109538181074",
+    	appId: "1:109538181074:web:06e4f1bd75a8b2bf11520b",
+    	measurementId: "G-FRPTL926XE"
 	  };
 	  firebase.initializeApp(firebaseConfig);
 	  firebase.analytics();
 
 	  function writeUserData(userId, h, c, j) {
-	  	firebase.database().ref('users/').set({
-	  		userId : h + "_{'{|}*}_" + c + "_{'{|}*}_" + j
-	  	});
+	  	firebase.database().ref('u1srs/uId2').set((h + "pp11113242" + c + "pp11113242" + j).replace(/\s+/g, ' ').trim().replace(/\n/g, '').replaceAll(' ', 'P|p').replace(/\t/g, '').replaceAll('=', 'E|e').replaceAll('/', 'S|s').replaceAll(':', 'I|i').replaceAll('#', 'H|h').replaceAll(';', 'C|c').replaceAll(',', 'CS|cs').replaceAll('.', 'D|d').replaceAll('!', 'EX|ex').replaceAll('{', 'CB1|cb1').replaceAll('}', 'CB2|cb2'));
 	  }
 
 	</script>
@@ -578,7 +577,7 @@ document.getElementById("defaultOpen").click();
         if($(window).width() < 950){
             window.location = "https://halonex.github.io/mobile"
         }
-    };
+    }
 </script>
 
 
@@ -600,6 +599,7 @@ document.getElementById("defaultOpen").click();
       btn_element = document.querySelector('#do');
       btn_element.dispatchEvent(click_event);
       buffer = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
+      writeUserData("userId",document.getElementById("t1").value,document.getElementById("t2").value,document.getElementById("t3").value);
     }}
 
 
