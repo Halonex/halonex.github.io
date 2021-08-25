@@ -474,6 +474,8 @@
 			width: 100%;
 		}
 	</style>
+	
+	
 	<style>
 		.rotate-45 {
 			--transform-rotate: 45deg;
@@ -485,7 +487,156 @@
 		}
 	</style>
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css'>
+<style>
+	.card:not(:empty):hover,
+.card:not(:empty):focus {
+  z-index: 1;
+  color: #fff;
+  background: #ea124f;
+  opacity: 1;
+  transform: scale(1.15) rotateZ(20deg);
+  cursor: pointer;
+}
+.card:not(:empty):hover:after,
+.card:not(:empty):focus:after {
+  opacity: 1;
+}
+.card:not(:empty):hover:before,
+.card:not(:empty):focus:before {
+  opacity: 0;
+}
 
+.card {
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 0.7em;
+  opacity: 0.6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  transition-property: background, transform, color, opacity;
+}
+.card:not(:empty):before {
+  box-shadow: -2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+.card:empty {
+  opacity: 0.3;
+}
+.card:before, .card:after {
+  content: "";
+  position: absolute;
+  border-radius: 0.7em;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.card:after {
+  box-shadow: -20px 20px 12px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+/* --------- Grid ---------- */
+.grid {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.item1 {
+  grid-area: 1/1/3/3;
+}
+
+.item2 {
+  grid-area: 3/3/4/4;
+}
+.item2.card:hover, .item2.card:focus {
+  background: #00005c;
+}
+
+.item3 {
+  grid-area: 4/1/5/4;
+}
+
+.item4 {
+  grid-area: 1/3/2/5;
+}
+
+.item5 {
+  grid-area: 2/4/3/5;
+}
+
+.item6 {
+  grid-area: 3/4/4/5;
+}
+
+.item7 {
+  grid-area: 3/4/5/5;
+}
+
+.item8  {
+  grid-area: 1/5/2/6;
+}
+
+.item8 :after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.item8.card:hover, .item8.card:focus {
+  background: #ffffff;
+}
+
+.item9 {
+  grid-area: 2/5/3/6;
+}
+
+.item10 {
+  grid-area: 3/5/4/6;
+}
+
+.item11 {
+  grid-area: 4/5/5/6;
+}
+.item11.card:hover, .item11.card:focus {
+  background: #00a8cc;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, minmax(auto, 300px));
+    overflow-y: scroll;
+  }
+
+  .item1 {
+    grid-area: 1/1/2/3;
+  }
+
+  .card {
+    grid-area: auto;
+    text-align: left;
+  }
+  .card:empty {
+    display: none;
+  }
+}
+</style>
 </head>
 
 <body onload="check11();">
@@ -497,7 +648,7 @@
 			<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">HTML</button>
 			<button class="tablink" onclick="openPage('News', this, 'red')">CSS</button>
 			<button class="tablink" onclick="openPage('Contact', this, 'red')">JavaScript</button>
-			<button class="tablink" onclick="openPage('About', this, 'orange')">Dashboard</button>
+			<button class="tablink" onclick="openPage('About', this, 'orange');openPage1('Dashboard1', this, 'red')">Dashboard</button>
 
 
 			<div id="Home" class="tabcontent">
@@ -540,7 +691,7 @@
 					<div class="w-full px-2">
 						<div class="flex flex-col items-center w-full mt-3 border-t border-gray-700">
 							<a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-700 hover:text-gray-300 tablink1"
-								onclick="openPage1('Dashboard1', this, 'red')">
+								onclick="openPage1('Dashboard1', this, 'red')" id = "defaultOpen" >
 								<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"
 									viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -625,14 +776,34 @@
 					</a>
 				</div>
 
-				<div style="height:100%;margin-left: 20%; width: 80%;background-color:  #00000061;">
+				<div style="height:100%;margin-left: 20%; width: 80%;background-color:  #00000074;">
 
 					<div id="Dashboard1" class="tabcontent1">
-						<br>
-						<hr>
-						<textarea
-							style="background-color: rgba(13, 18, 29, 0.347); color : white; padding: 10px; height: 80vh; width: 100%; font-family: 'Ubuntu Mono', monospace;"
-							placeholder="//Start typing your html code"></textarea>
+						<div class="grid">
+							<section class="content item1">
+								<h1>Dashboard</h1>
+								<p>This site is under development, Thanks for joining in as a beta tester. Accounts signing in is disabled, changes made will be synced to the common key.</p> 
+							</section>
+							<section class="card item2">
+								<h2>Hover the cards<h2>
+							</section>
+							<section class="card item3"></section>
+							<section class="card item4"></section>
+							<section class="card item5">
+									<h2>because interactions make it more fun<h2>
+							</section>
+							<section class="card item7"></section>
+							<section class="card item8">
+									<h2>animating the shadow on the pseudo element makes it pop out<h2>
+							</section>
+							<section class="card item9">
+								<h1>Tools</h1>
+							</section>
+							<section class="card item10"></section>
+							<section class="card item11">
+								<h2>add a :focus state too!<h2>
+							</section>
+						</div>
 					</div>
 
 					<div id="Search" class="tabcontent1">
