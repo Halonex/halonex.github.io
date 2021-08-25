@@ -616,6 +616,13 @@
   justify-content: center;
 }
 
+.item1,.item10, .item11, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .grid
+:before,
+
+.item1,.item10, .item11, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .grid :after {
+  position: relative;
+  box-sizing: border-box;
+}
 
 @media only screen and (max-width: 600px) {
   .grid {
@@ -782,19 +789,25 @@
 						<div class="grid">
 							<section class="content item1">
 								<h1>Dashboard</h1>
-								<p>This site is under development, Thanks for joining in as a beta tester. Accounts signing in is disabled, changes made will be synced to the common key.</p> 
+								<p>This site is under development, Thanks for joining in as beta tester. Accounts disabled, changes made will be synced to the common key.</p> 
 							</section>
 							<section class="card item2">
 								<h2>Hover the cards<h2>
 							</section>
 							<section class="card item3"></section>
-							<section class="card item4"></section>
+							<section class="card item4">
+								<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"
+									viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+										d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+								</svg>
+							</section>
 							<section class="card item5">
 									<h2>because interactions make it more fun<h2>
 							</section>
 							<section class="card item7"></section>
 							<section class="card item8">
-									<h2>animating the shadow on the pseudo element makes it pop out<h2>
+									<h2 style="color:black;">animating the shadow on the pseudo element makes it pop out<h2>
 							</section>
 							<section class="card item9">
 								<h1>Tools</h1>
