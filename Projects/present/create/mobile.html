@@ -644,6 +644,99 @@
   }
 }
 </style>
+<style>
+	.center
+{
+  height:90vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.property-card
+{
+  height:18em;
+  width:14em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+.property-image
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://lh3.googleusercontent.com/proxy/hIOUCHdpY3yIWYjZex-IKU18s1Sh_Y_CMVEYuyhuW8rIV7cSnpnJ0IvP_T4YaSiq2J5e_qDzPugFnVEGxKfqIM_fo0lpwUXk1FaK8TRVVZvsm8pKiXHwSGdI34tzHAEQVyN0nXgYntoR5DtIHEjxK2sllXxEaeswX2A_RijXDJDy');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+.property-social-icons
+{
+  width:100%;
+  height:1em;
+  background-color:#FAFAFC;
+  position:absolute;
+  bottom:1em;
+
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 0em;
+}
+.property-card:hover .property-image
+{
+  height:14em;
+}
+
+.property-card:hover .property-social-icons
+{
+  background-color:#f2f2f2;
+}
+
+</style>
 </head>
 
 <body onload="check11();">
@@ -823,16 +916,26 @@
 						Connect to Companion
 					</div>
 
-					<div id="Connect" class="tabcontent1">
-						<br>
-						<hr>
-						<br>
-						<p>Connect to Companion</p>
-						<br>
-						<hr>
-						<div style="width: 100%;height: 100%;background-color: white;">
-
-						</div>
+					<div id="Connect" class="tabcontent1" style="background-color:#f2f2f2;">
+						<div class="center">
+							<div class="property-card">
+							  <a href="#">
+								<div class="property-image">
+								  <div class="property-image-title">
+								  </div>
+								</div></a>
+							  <div class="property-description">
+								<h5 style="color: black; margin:0px; font-size:1.4em; font-weight:700;"> Scan QR </h5>
+								<p style="font-size:12px; color:black">Scan QR Code with the companion to get real time preview of your app</p>
+							  </div>
+							  <a href="#">
+								<div class="property-social-icons" style = "float:center;">
+								  <button style = "border: none; width:100%;background:black;padding:5px;color:white; font-size: 2vh;">Download Companion</button>
+								  
+								</div>
+							  </a>
+							</div>
+						  </div>
 					</div>
 
 				</div>
