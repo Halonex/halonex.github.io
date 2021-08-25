@@ -224,7 +224,7 @@
 			width: 50em;
 			height: 50em;
 			border-radius: 50%;
-			background: linear-gradient(110deg, #5D2B8B, #0055ff, #5D2B8B);
+			background: linear-gradient(110deg, #1d1d1d, #000000, #4f4f4f);
 			bottom: 0;
 		}
 
@@ -686,7 +686,7 @@
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url('https://lh3.googleusercontent.com/proxy/hIOUCHdpY3yIWYjZex-IKU18s1Sh_Y_CMVEYuyhuW8rIV7cSnpnJ0IvP_T4YaSiq2J5e_qDzPugFnVEGxKfqIM_fo0lpwUXk1FaK8TRVVZvsm8pKiXHwSGdI34tzHAEQVyN0nXgYntoR5DtIHEjxK2sllXxEaeswX2A_RijXDJDy');
+  background-image:url('https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=47-79-79&margin=50&data=halonex/uId2');
   background-size:cover;
   background-repeat:no-repeat;
 }
@@ -739,7 +739,7 @@
 </style>
 </head>
 
-<body onload="check11();">
+<body onload="check11(); qr = new Image();qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=47-79-79&margin=50&data=halonex/uId2';">
 
 
 	<div class="splitter" style="height:100%;">
@@ -927,6 +927,11 @@
 							  <div class="property-description">
 								<h5 style="color: black; margin:0px; font-size:1.4em; font-weight:700;"> Scan QR </h5>
 								<p style="font-size:12px; color:black">Scan QR Code with the companion to get real time preview of your app</p>
+								<br>
+								<div  style="padding-left: 40%;">
+								<svg>
+									<path fill="lightgrey" d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"/>
+								</svg></div>
 							  </div>
 							  <a href="#">
 								<div class="property-social-icons" style = "float:center;">
@@ -951,16 +956,16 @@
 					<div class="front">
 						<div class="screen">
 							<div class="screen__view">
-								<div style="background:white; width:100%;height:100%; padding-top: 10%;overflow-x: hidden;"
-									id="mainmobilescreen"></div>
+								<div style="background:white;width:100%;height:100%; padding-top: 10%;overflow-x: hidden;"
+									id="screen1"></div>
 
 								<div class="hello">
 									<ul>
 										<li>
-											<p>Connect</p>
+											<p style = "font-size:30px ;color:white">Connect</p>
 										</li>
 										<li>
-											<p style="font-size:9px; text-align:center;">Halonex Companion</p>
+											<p style="font-size:9px; text-align:center; color: white;">Halonex Companion</p>
 										</li>
 									</ul>
 								</div>
@@ -988,9 +993,15 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script type="text/javascript">
 
+	var cssvalues;
+
 		function update() {
-			document.getElementById("mainmobilescreen").innerHTML = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
+			document.getElementById("screen1").innerHTML = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value.replaceAll("body",".screen1") + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
 			writeUserData("userId", document.getElementById("t1").value, document.getElementById("t2").value, document.getElementById("t3").value);
+			if (document.getElementById("t2").value.includes("body")){
+				cssvalues = document.getElementById("t2").value;
+				cssvalues = cssvalues.split("body").split("{")[1].split("}")[0];
+			}
 		}
 	</script>
 
@@ -1095,7 +1106,7 @@
 		firebase.analytics();
 
 		function writeUserData(userId, h, c, j) {
-			firebase.database().ref('u1srs/uId2').set((h + "pp11113242" + c + "pp11113242" + j).replace(/\s+/g, ' ').trim().replace(/\n/g, '').replaceAll(' ', 'P|p').replace(/\t/g, '').replaceAll('=', 'E|e').replaceAll('/', 'S|s').replaceAll(':', 'I|i').replaceAll('#', 'H|h').replaceAll(';', 'C|c').replaceAll(',', 'CS|cs').replaceAll('.', 'D|d').replaceAll('!', 'EX|ex').replaceAll('{', 'CB1|cb1').replaceAll('}', 'CB2|cb2'));
+			firebase.database().ref('u1srs/uId2').set((h + "<!--HTML-->pp11113242" + c + "/*CSS*/pp11113242/*JS*/" + j).replace(/\s+/g, ' ').trim().replace(/\n/g, '').replaceAll(' ', 'P|p').replace(/\t/g, '').replaceAll('=', 'E|e').replaceAll('/', 'S|s').replaceAll(':', 'I|i').replaceAll('#', 'H|h').replaceAll(';', 'C|c').replaceAll(',', 'CS|cs').replaceAll('.', 'D|d').replaceAll('!', 'EX|ex').replaceAll('{', 'CB1|cb1').replaceAll('}', 'CB2|cb2'));
 		}
 
 	</script>
