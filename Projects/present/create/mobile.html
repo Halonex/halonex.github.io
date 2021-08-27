@@ -497,47 +497,21 @@
   transform: scale(1.15) rotateZ(0deg);
   cursor: pointer;
 }
-.card:not(:empty):hover:after,
-.card:not(:empty):focus:after {
-  opacity: 1;
-}
-.card:not(:empty):hover:before,
-.card:not(:empty):focus:before {
-  opacity: 0;
-}
+
 
 .card {
   padding: 10px;
   background: #ffffff;
   border-radius: 0.7em;
-  opacity: 0.6;
+  opacity: 1;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
   transition-property: background, transform, color, opacity;
 }
-.card:not(:empty):before {
-  box-shadow: -2px 2px 8px 2px rgba(0, 0, 0, 0.2);
-}
-.card:empty {
-  opacity: 0.3;
-}
-.card:before, .card:after {
-  content: "";
-  position: absolute;
-  border-radius: 0.7em;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1);
-}
-.card:after {
-  box-shadow: -20px 20px 12px 6px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-}
+
+
 
 /* --------- Grid ---------- */
 .grid {
@@ -885,29 +859,30 @@
 								<h1>Dashboard</h1>
 								<p>This site is under development, Thanks for joining in as beta tester. Accounts disabled, changes made will be synced to the common key.</p> 
 							</section>
-							<section class="card item2" style="background: #69cf15;">
+							<section class="card item2" style="background: #A2A3BB;">
 								<h2 style="color:black;">2<h2>
 							</section>
-							<section class="card item3" style="background: rgb(9, 89, 218);"><h2 style="color:black;">3<h2></h2></section>
+							<section class="card item3" style="background: #B3B7EE;"><h2 style="color:black;">3<h2></h2></section>
 							
-							<section class="card item4" style="background: orange;">
+							<section class="card item4" style="background: #9395d3;">
 								<h2 style="color:black;">4<h2>
 							</section>
-							<section class="card item5">
+							<section class="card item5" style="background-color: #ea124f;">
 								<h2 style="color:black;">5<h2>
 							</section>
 							<section class="card item7" style="background: rgb(0, 192, 192);">
 								<h2 style="color:black;">7<h2></h2></section>
-							<section class="card item8">
+
+							<section class="card item8" style="background-color: #FBF9FF;">
 									<h2 style="color:black;">8<h2>
 							</section>
-							<section class="card item9" >
+							<section class="card item9" style="background: #576490;">
 								<h2 style="color:black;">9<h2>
 							</section>
-							<section class="card item10">
+							<section class="card item10" style="background: #9948d6;">
 								<h2 style="color:black;">10 </h2>
 							</section>
-							<section class="card item11">
+							<section class="card item11" style=" background: #00a8cc;">
 								<h2 style="color:black;">11<h2>
 							</section>
 						</div>
