@@ -253,7 +253,7 @@
 								<h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">
 									Unlock Console</h2>
 							</section>
-							<section class="card item11" style=" background: #00a8cc;">
+							<section class="card item11" style=" background: #00a8cc;" onclick="openPage1('feedback', this, 'red')">
 
 								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor"
 									class="bi bi-bug-fill" viewBox="0 0 16 16">
@@ -274,6 +274,48 @@
 						<br>
 						<hr>
 						Connect to Companion
+					</div>
+
+					<div id="feedback" class="tabcontent1">
+						<div class="container">
+
+							<div style = "	margin: 2rem auto;
+							display: flex;
+							flex-direction: column;
+							width: 100%;
+							max-width: 425px;
+							background-color: #FFF;
+							border-radius: 10px;
+							box-shadow: 0 10px 20px 0 rgba(#999, .25);
+							padding: .75rem;">
+								<div style = "border-radius: 8px;
+							overflow: hidden;
+							padding-bottom: 55%;
+							background-image: url('https://halonex.github.io/src/3.png');
+							background-repeat: no-repeat;
+							background-size: 100%;
+							position: relative;
+							object-fit: cover;">	
+								</div>
+								<form style = "padding: 2rem 1rem 0;">
+												<div style = "display: flex;
+						  flex-direction: column-reverse;
+						  position: relative;
+						  padding-top: 1.5rem;">
+										<input type="text" class="in-field" style = "appearance: none;
+							border-radius: 0; color: black;" value="" required/>
+										<label class="in-label">Feedback</label>
+									</div>
+									<div class="action">
+										<button class="action-button">Submit</button>
+									</div>
+								</form>
+								<div class="card-info">
+									<p>Thanks for helping us improve</p>
+								</div>
+							</div>
+						</div>
+											
 					</div>
 
 					<div id="Connect" class="tabcontent1" style="background-color:#f2f2f2;">
