@@ -541,8 +541,10 @@
 }
 
 .item4 {
-  grid-area: 1/3/2/5;
+  
+  grid-area: 1/5/2/6;
   background: #ffffff;
+
 }
 
 .item5 {
@@ -558,7 +560,7 @@
 }
 
 .item8  {
-  grid-area: 1/5/2/6;
+	grid-area: 1/3/2/5;
 }
 
 .item8 :after {
@@ -786,9 +788,9 @@
 							<a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-700 hover:text-gray-300 tablink1"
 								onclick="openPage1('Connect', this, 'red')">
 								<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"
-									viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"
-										d="M10,15.654c-0.417,0-0.754,0.338-0.754,0.754S9.583,17.162,10,17.162s0.754-0.338,0.754-0.754S10.417,15.654,10,15.654z M14.523,1.33H5.477c-0.833,0-1.508,0.675-1.508,1.508v14.324c0,0.833,0.675,1.508,1.508,1.508h9.047c0.833,0,1.508-0.675,1.508-1.508V2.838C16.031,2.005,15.356,1.33,14.523,1.33z M15.277,17.162c0,0.416-0.338,0.754-0.754,0.754H5.477c-0.417,0-0.754-0.338-0.754-0.754V2.838c0-0.417,0.337-0.754,0.754-0.754h9.047c0.416,0,0.754,0.337,0.754,0.754V17.162zM13.77,2.838H6.23c-0.417,0-0.754,0.337-0.754,0.754v10.555c0,0.416,0.337,0.754,0.754,0.754h7.539c0.416,0,0.754-0.338,0.754-0.754V3.592C14.523,3.175,14.186,2.838,13.77,2.838z M13.77,13.77c0,0.208-0.169,0.377-0.377,0.377H6.607c-0.208,0-0.377-0.169-0.377-0.377V3.969c0-0.208,0.169-0.377,0.377-0.377h6.785c0.208,0,0.377,0.169,0.377,0.377V13.77z" />
+									viewBox="0 0 20 20" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+  									<path stroke-linecap="round" stroke-linejoin="round" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
 								</svg>
 								<span class="ml-2 text-sm font-medium">Connect</span>
 								<button onclick="update();" id="do" style="display: none;">Update</button>
@@ -803,8 +805,6 @@
 								<span class="ml-2 text-sm font-medium">Docs</span>
 							</a>
 						</div>
-						<br>
-						<hr>
 						<div class="flex flex-col items-center w-full mt-2 border-t border-gray-700">
 							<a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-700 hover:text-gray-300 tablink1"
 								href="#">
@@ -853,7 +853,7 @@
 
 				<div style="height:100%;margin-left: 20%; width: 80%;background-color:  #00000074;">
 
-					<div id="Dashboard1" class="tabcontent1">
+					<div id="Dashboard1" class="tabcontent1" style="padding-bottom: 30px;">
 						<div class="grid">
 							<section class="content item1">
 								<h1 style="color: white; padding-bottom: 10px;">Dashboard</h1>
@@ -861,18 +861,35 @@
 								<p style="color: white; font-size: 14px; padding-right: 20px; padding-top: 10px;">This site is under development, Thanks for joining in as beta tester. Accounts disabled, changes made will be synced to the common key.</p> 
 							</section>
 							<section class="card item2" style="background: #A2A3BB;">
-								<h2 style="color:black;">2<h2>
+								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
+									<path d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.612.054.317.057.466.147.518.209a.095.095 0 0 1 .026.064.436.436 0 0 1-.06.2.307.307 0 0 1-.094.124.107.107 0 0 1-.069.015c-.09-.003-.258-.066-.498-.256zM8.278 6.97c-.04.244-.108.524-.2.829a4.86 4.86 0 0 1-.089-.346c-.076-.353-.087-.63-.046-.822.038-.177.11-.248.196-.283a.517.517 0 0 1 .145-.04c.013.03.028.092.032.198.005.122-.007.277-.038.465z"/>
+									<path fill-rule="evenodd" d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zM4.165 13.668c.09.18.23.343.438.419.207.075.412.04.58-.03.318-.13.635-.436.926-.786.333-.401.683-.927 1.021-1.51a11.651 11.651 0 0 1 1.997-.406c.3.383.61.713.91.95.28.22.603.403.934.417a.856.856 0 0 0 .51-.138c.155-.101.27-.247.354-.416.09-.181.145-.37.138-.563a.844.844 0 0 0-.2-.518c-.226-.27-.596-.4-.96-.465a5.76 5.76 0 0 0-1.335-.05 10.954 10.954 0 0 1-.98-1.686c.25-.66.437-1.284.52-1.794.036-.218.055-.426.048-.614a1.238 1.238 0 0 0-.127-.538.7.7 0 0 0-.477-.365c-.202-.043-.41 0-.601.077-.377.15-.576.47-.651.823-.073.34-.04.736.046 1.136.088.406.238.848.43 1.295a19.697 19.697 0 0 1-1.062 2.227 7.662 7.662 0 0 0-1.482.645c-.37.22-.699.48-.897.787-.21.326-.275.714-.08 1.103z"/>
+								</svg>
+								<h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">PDF<h2></h2>
 							</section>
-							<section class="card item3" style="background: #B3B7EE;"><h2 style="color:black;">3<h2></h2></section>
-							
+							<section class="card item3" style="background: #B3B7EE;">
+								<table><tr><td style="width:30%;padding-left: 10px;">
+								<svg style = "float:right;" xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-journal-code" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z"/>
+									<path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+									<path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+								  </svg></td><td style="justify-content:center;">
+								  <h2 style="color:rgb(255, 255, 255); float: left; font-size: 12px;padding: 15px;">Pre-Built Components and Elements</h2></td>
+								  </tr>
+								</table>
+							</section>
+
 							<section class="card item4" style="background: #9395d3;">
-								<h2 style="color:black;">4<h2>
+								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+									<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+								  </svg>
+								<h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;"> Inspiration<h2>
 							</section>
 							<section class="card item5" style="background-color: #ea124f;">
 								<svg xmlns="http://www.w3.org/2000/svg"  width=40% height=40% fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
 									<path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
 								  </svg>
-								<h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">Export<h2>
+								<h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">Export APK<h2>
 							</section>
 							<section class="card item7" style="background: rgb(0, 192, 192);">
 								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
@@ -880,8 +897,11 @@
 								  </svg>
 								  <h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">Source Code</h2>
 								  </section>
-							<section class="card item8" style="background-color: #FBF9FF;">
-									<h2 style="color:black;">8<h2>
+							<section class="item8" style="background-color: #00000000;border:solid 1px;border-color:white;padding: 10px;border-radius: 0.7em;opacity: 1;display: flex;justify-content: center;align-items: center;">
+								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+									<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+									<path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+								  </svg>
 							</section>
 							<section class="card item9" style="background: #576490;">
 								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
@@ -890,7 +910,10 @@
 								  <h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">Backup</h2>
 							</section>
 							<section class="card item10" style="background: #9948d6;">
-								<h2 style="color:black;">10 </h2>
+								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+									<path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2z"/>
+								  </svg>
+								  <h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">Unlock Console</h2>
 							</section>
 							<section class="card item11" style=" background: #00a8cc;">
 						
