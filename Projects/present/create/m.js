@@ -103,7 +103,7 @@ function writeUserData(userId, h, c, j) {
 }
 
 function check11() {
-    if ($(window).width() < 950) {
+    if ($(window).width() < 850) {
         window.location = "https://halonex.github.io/mobile"
     }
 }
