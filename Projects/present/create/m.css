@@ -741,13 +741,7 @@ background-color:#f2f2f2;
     background: #f3f2f2;
   }
   
-  h4 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000;
-    opacity: 0.85;
-  }
-  
+
   label {
     font-size: 12.5px;
     color: #000;
@@ -762,7 +756,8 @@ background-color:#f2f2f2;
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 20px;
-    width: 300px;
+    width: 60%;
+    border: rgb(255, 0, 0) 1px solid;
   }
   form h4 {
     margin-bottom: 20px;
@@ -969,22 +964,25 @@ background-color:#f2f2f2;
   .session {
     display: flex;
     flex-direction: row;
-    width: auto;
+    width: 70%;
     height: auto;
     margin: auto auto;
     background: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.12);
+    justify-content: center;
+    border: rgb(255, 255, 255) 10px solid;
   }
   
   .left {
-    width: 220px;
+    width: 40%;
     height: auto;
     min-height: 100%;
     position: relative;
-    background-image: url("https://lh3.googleusercontent.com/ZgMrsRTd3GisGrjlTO-Dp_60n75o7gk3XxTtfK1QxoOlC5FAB4qHRzBRY2HWGB8GRw0fZx1P_6EYOw=w1920-h990");
+    background-image: url("https://lh4.googleusercontent.com/UGl78VsPE5Q9kS2PGMqWugxkOPaYMcxrG9v6TLy_8h90rt2hAJbxP-Z5qfDI1UHlr7pIxNIH1m8axA=w1920-h990");
     background-size: cover;
     background-position: center;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    
   }
