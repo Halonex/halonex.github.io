@@ -112,6 +112,27 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+
+	const sign1 = () => {
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+  firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
+	console.log("Signed in");
+    window.alert("account created");
+    var user = userCredential.user;
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+	window.alert(errorMessage);
+  });
+
+
+}
+
+
 function writeUserData(userId, h, c, j) {
     firebase.database().ref('u1srs/uId2').set((h + "<!--HTML-->pp11113242" + c + "/*CSS*/pp11113242/*JS*/" + j).replace(/\s+/g, ' ').trim().replace(/\n/g, '').replaceAll(' ', 'P|p').replace(/\t/g, '').replaceAll('=', 'E|e').replaceAll('/', 'S|s').replaceAll(':', 'I|i').replaceAll('#', 'H|h').replaceAll(';', 'C|c').replaceAll(',', 'CS|cs').replaceAll('.', 'D|d').replaceAll('!', 'EX|ex').replaceAll('{', 'CB1|cb1').replaceAll('}', 'CB2|cb2'));
 }

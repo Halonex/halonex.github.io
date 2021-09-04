@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="m.css">
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css'>
 	<link rel="SHORTCUT ICON" href="https://lh3.google.com/u/0/d/1g4Wd7xpS4Fqba-hncMJmYsGazDekRr2m=w1920-h990-iv1" />
-	<link rel="icon" href="https://lh3.google.com/u/0/d/1g4Wd7xpS4Fqba-hncMJmYsGazDekRr2m=w1920-h990-iv1" type="image/ico" />
+	<link rel="icon" href="https://lh3.google.com/u/0/d/1g4Wd7xpS4Fqba-hncMJmYsGazDekRr2m=w1920-h990-iv1"
+		type="image/ico" />
 </head>
 
 <body
@@ -19,11 +20,11 @@
 	<div class="splitter" style="height:100%;">
 		<div id="first" style="background-color: #1F1B24;">
 
-			<button class="tablink" onclick="openPage('Home', this, 'red')" >HTML</button>
+			<button class="tablink" onclick="openPage('Home', this, 'red')">HTML</button>
 			<button class="tablink" onclick="openPage('News', this, 'red')">CSS</button>
 			<button class="tablink" onclick="openPage('Contact', this, 'red')">JavaScript</button>
-			<button class="tablink"
-				onclick="openPage('About', this, 'orange');openPage1('Dashboard1', this, 'orange')" id="defaultOpen">Dashboard</button>
+			<button class="tablink" onclick="openPage('About', this, 'orange');openPage1('Dashboard1', this, 'orange')"
+				id="defaultOpen">Dashboard</button>
 
 
 			<div id="Home" class="tabcontent">
@@ -142,7 +143,7 @@
 						</div>
 					</div>
 					<a class="flex items-center justify-center w-full h-16 mt-auto bg-gray-800 hover:bg-gray-700 hover:text-gray-300 tablink1"
-						href="#" onclick="openPage1('auth', this, 'red')">
+						href="#" onclick="openPage1('authtab', this, 'red')">
 						<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"
 							viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -254,7 +255,8 @@
 								<h2 style="color:rgb(255, 255, 255); float: center; font-size: 12px; margin-top: 10px;">
 									Unlock Console</h2>
 							</section>
-							<section class="card item11" style=" background: #00a8cc;" onclick="openPage1('feedback', this, 'red')">
+							<section class="card item11" style=" background: #00a8cc;"
+								onclick="openPage1('feedback', this, 'red')">
 
 								<svg xmlns="http://www.w3.org/2000/svg" width=40% height=40% fill="currentColor"
 									class="bi bi-bug-fill" viewBox="0 0 16 16">
@@ -271,136 +273,173 @@
 					</div>
 
 
-
-					<div id="auth" class="tabcontent1 tabcontent2" style = "height: 100%; width: 100%; padding: 0px; margin: 0px;">
-						<div id = "logauth" style="padding: 0px; margin: 0px;">
+					<div id="authtab" class="tabcontent1" style="height: 100%; width: 100%; padding: 0px; margin: 0px;">
+						<div id="logauth" style="padding: 0px; margin: 0px;">
 							<div class="session">
-							  <div class="left"> 
-							  </div>
-							  <form action="" class="log-in" autocomplete="off"> 
-								<h4>We are <span>Halonex</span></h4>
-								<p>Welcome</p><p>
-								<button style="background-color: black; color: white; border: none; padding: 10px; border-radius: 10px; float:left"  onclick="openPage2('authin', this, 'red')">Login</button>
-								<button style="background-color: black; color: white; border: none; padding: 10px; border-radius: 10px; float: right; margin-left: 30px;" onclick="openPage2('authup', this, 'red')">Signup</button>
-							</p>  
-							</form>
+								<div class="left">
+								</div>
+								<form action="" class="log-in" autocomplete="off">
+									<h4>We are <span>Halonex</span></h4>
+									<p>Welcome</p>
+									<p>
+										<button
+											style="background-color: black; color: white; border: none; padding: 10px; border-radius: 10px; float:left"
+											onclick="openPage1('authin', this, 'red')" id="authtablogin">Login</button>
+										<button
+											style="background-color: black; color: white; border: none; padding: 10px; border-radius: 10px; float: right; margin-left: 30px;"
+											onclick="openPage1('authup', this, 'red')"
+											id="authtabsignup">Signup</button>
+									</p>
+								</form>
 							</div>
-							</div>
-		
+						</div>
+
 					</div>
 
-					<div id="authin" class="tabcontent1 tabcontent2" style = "height: 100%; width: 100%; padding: 0px; margin: 0px;">
-						<div id = "logauth" style="padding: 0px; margin: 0px;">
+					<div id="authin" class="tabcontent1" style="height: 100%; width: 100%; padding: 0px; margin: 0px;">
+						<div id="logauth" style="padding: 0px; margin: 0px;">
 							<div class="session">
-							  <div class="left"> 
-							  </div>
-							  <form action="" class="log-in" autocomplete="off"> 
-								<h4>Welcome to <span>Halonex</span></h4>
-								<p>Welcome Log in to your account to access your Dashboard</p>
-								<div class="floating-label">
-								  <input placeholder="Email" type="email" name="email" id="email" autocomplete="off" style="color: lightgray;">
-								  <label for="email">Email:</label>
-								  <div class="icon">
-						  <?xml version="1.0" encoding="UTF-8"?>
-						  <svg enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-						  <style type="text/css">
-							  .st0{fill:none;}
-						  </style>
-						  <g transform="translate(0 -952.36)">
-							  <path d="m17.5 977c-1.3 0-2.4 1.1-2.4 2.4v45.9c0 1.3 1.1 2.4 2.4 2.4h64.9c1.3 0 2.4-1.1 2.4-2.4v-45.9c0-1.3-1.1-2.4-2.4-2.4h-64.9zm2.4 4.8h60.2v1.2l-30.1 22-30.1-22v-1.2zm0 7l28.7 21c0.8 0.6 2 0.6 2.8 0l28.7-21v34.1h-60.2v-34.1z"/>
-						  </g>
-						  <rect class="st0" width="100" height="100"/>
-						  </svg>
-								  </div>
+								<div class="left">
 								</div>
-								<div class="floating-label">
-								  <input placeholder="Password" type="password" name="password" id="password" autocomplete="off" style = "color:lightgray">
-								  <label for="password">Password:</label>
-								  <div class="icon">
-									
-									<?xml version="1.0" encoding="UTF-8"?>
-									<svg enable-background="new 0 0 24 24" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-						  <style type="text/css">
-							  .st0{fill:none;}
-							  .st1{fill:#010101;}
-						  </style>
-								  <rect class="st0" width="24" height="24"/>
-								  <path class="st1" d="M19,21H5V9h14V21z M6,20h12V10H6V20z"/>
-								  <path class="st1" d="M16.5,10h-1V7c0-1.9-1.6-3.5-3.5-3.5S8.5,5.1,8.5,7v3h-1V7c0-2.5,2-4.5,4.5-4.5s4.5,2,4.5,4.5V10z"/>
-								  <path class="st1" d="m12 16.5c-0.8 0-1.5-0.7-1.5-1.5s0.7-1.5 1.5-1.5 1.5 0.7 1.5 1.5-0.7 1.5-1.5 1.5zm0-2c-0.3 0-0.5 0.2-0.5 0.5s0.2 0.5 0.5 0.5 0.5-0.2 0.5-0.5-0.2-0.5-0.5-0.5z"/>
-						  </svg>
-								  </div>
-								  
-								</div>
-								<button type="submit" onClick="return false;" id = "authbutton">Log in</button>
-								<a href="https://www.loflabs.com/terms-and-conditions-1" class="discrete" target="_blank">Terms & Conditions</a>
-							  </form>
+								<form action="" class="log-in" autocomplete="off">
+									<h4>Welcome to <span>Halonex</span></h4>
+									<p>Welcome Log in to your account to access your Dashboard</p>
+									<div class="floating-label">
+										<input placeholder="Email" type="email" name="email1" id="email1"
+											autocomplete="off" style="color: lightgray;">
+										<label for="email">Email:</label>
+										<div class="icon">
+											<?xml version="1.0" encoding="UTF-8"?>
+											<svg enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 100 100"
+												xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+												<style type="text/css">
+													.st0 {
+														fill: none;
+													}
+												</style>
+												<g transform="translate(0 -952.36)">
+													<path
+														d="m17.5 977c-1.3 0-2.4 1.1-2.4 2.4v45.9c0 1.3 1.1 2.4 2.4 2.4h64.9c1.3 0 2.4-1.1 2.4-2.4v-45.9c0-1.3-1.1-2.4-2.4-2.4h-64.9zm2.4 4.8h60.2v1.2l-30.1 22-30.1-22v-1.2zm0 7l28.7 21c0.8 0.6 2 0.6 2.8 0l28.7-21v34.1h-60.2v-34.1z" />
+												</g>
+												<rect class="st0" width="100" height="100" />
+											</svg>
+										</div>
+									</div>
+									<div class="floating-label">
+										<input placeholder="Password" type="password" name="password1" id="password1"
+											autocomplete="off" style="color:lightgray">
+										<label for="password">Password:</label>
+										<div class="icon">
+
+											<?xml version="1.0" encoding="UTF-8"?>
+											<svg enable-background="new 0 0 24 24" version="1.1" viewBox="0 0 24 24"
+												xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+												<style type="text/css">
+													.st0 {
+														fill: none;
+													}
+
+													.st1 {
+														fill: #010101;
+													}
+												</style>
+												<rect class="st0" width="24" height="24" />
+												<path class="st1" d="M19,21H5V9h14V21z M6,20h12V10H6V20z" />
+												<path class="st1"
+													d="M16.5,10h-1V7c0-1.9-1.6-3.5-3.5-3.5S8.5,5.1,8.5,7v3h-1V7c0-2.5,2-4.5,4.5-4.5s4.5,2,4.5,4.5V10z" />
+												<path class="st1"
+													d="m12 16.5c-0.8 0-1.5-0.7-1.5-1.5s0.7-1.5 1.5-1.5 1.5 0.7 1.5 1.5-0.7 1.5-1.5 1.5zm0-2c-0.3 0-0.5 0.2-0.5 0.5s0.2 0.5 0.5 0.5 0.5-0.2 0.5-0.5-0.2-0.5-0.5-0.5z" />
+											</svg>
+										</div>
+
+									</div>
+									<button type="submit" onClick="return false;" class="authbutton">Log in</button>
+									<a href="https://www.loflabs.com/terms-and-conditions-1" class="discrete"
+										target="_blank">Terms & Conditions</a>
+								</form>
 							</div>
-							</div>
-		
+						</div>
+
 					</div>
 
-					<div id="authup" class="tabcontent1 tabcontent2" style = "height: 100%; width: 100%; padding: 0px; margin: 0px;">
-						<div id = "logauth" style="padding: 0px; margin: 0px;">
+					<div id="authup" class="tabcontent1" style="height: 100%; width: 100%; padding: 0px; margin: 0px;">
+						<div id="logauth" style="padding: 0px; margin: 0px;">
 							<div class="session">
-							  <div class="left"> 
-							  </div>
-							  <form action="" class="log-in" autocomplete="off"> 
-								<h4>We are <span>Halonex</span></h4>
-								<p>Welcome Signup for a new account to access your Dashboard</p>
-								<div class="floating-label">
-								  <input placeholder="Email" type="email" name="email" id="email" autocomplete="off" style="color: lightgray;">
-								  <label for="email">Email:</label>
-								  <div class="icon">
-						  <?xml version="1.0" encoding="UTF-8"?>
-						  <svg enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-						  <style type="text/css">
-							  .st0{fill:none;}
-						  </style>
-						  <g transform="translate(0 -952.36)">
-							  <path d="m17.5 977c-1.3 0-2.4 1.1-2.4 2.4v45.9c0 1.3 1.1 2.4 2.4 2.4h64.9c1.3 0 2.4-1.1 2.4-2.4v-45.9c0-1.3-1.1-2.4-2.4-2.4h-64.9zm2.4 4.8h60.2v1.2l-30.1 22-30.1-22v-1.2zm0 7l28.7 21c0.8 0.6 2 0.6 2.8 0l28.7-21v34.1h-60.2v-34.1z"/>
-						  </g>
-						  <rect class="st0" width="100" height="100"/>
-						  </svg>
-								  </div>
+								<div class="left">
 								</div>
-								<div class="floating-label">
-								  <input placeholder="Password" type="password" name="password" id="password" autocomplete="off" style = "color:lightgray">
-								  <label for="password">Password:</label>
-								  <div class="icon">
-									
-									<?xml version="1.0" encoding="UTF-8"?>
-									<svg enable-background="new 0 0 24 24" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-						  <style type="text/css">
-							  .st0{fill:none;}
-							  .st1{fill:#010101;}
-						  </style>
-								  <rect class="st0" width="24" height="24"/>
-								  <path class="st1" d="M19,21H5V9h14V21z M6,20h12V10H6V20z"/>
-								  <path class="st1" d="M16.5,10h-1V7c0-1.9-1.6-3.5-3.5-3.5S8.5,5.1,8.5,7v3h-1V7c0-2.5,2-4.5,4.5-4.5s4.5,2,4.5,4.5V10z"/>
-								  <path class="st1" d="m12 16.5c-0.8 0-1.5-0.7-1.5-1.5s0.7-1.5 1.5-1.5 1.5 0.7 1.5 1.5-0.7 1.5-1.5 1.5zm0-2c-0.3 0-0.5 0.2-0.5 0.5s0.2 0.5 0.5 0.5 0.5-0.2 0.5-0.5-0.2-0.5-0.5-0.5z"/>
-						  </svg>
-								  </div>
-								  
-								</div>
-								<button type="submit" onClick="firebase.auth().createUserWithEmailAndPassword(document.getElementById('email').value, document.getElementById('password').value);" id = "authbutton">Signup</button>
-								<a href="https://www.loflabs.com/terms-and-conditions-1" class="discrete" target="_blank">Terms & Conditions</a>
-							  </form>
+								<div id = "formdiv">
+									<h4>We are <span>Halonex</span></h4>
+									<p>Welcome Signup for a new account to access your Dashboard</p>
+									<div class="floating-label">
+										<input placeholder="Email" type="email" name="email" id="email"
+											autocomplete="off" style="color: lightgray;">
+										<label for="email">Email:</label>
+										<div class="icon">
+											<?xml version="1.0" encoding="UTF-8"?>
+											<svg enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 100 100"
+												xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+												<style type="text/css">
+													.st0 {
+														fill: none;
+													}
+												</style>
+												<g transform="translate(0 -952.36)">
+													<path
+														d="m17.5 977c-1.3 0-2.4 1.1-2.4 2.4v45.9c0 1.3 1.1 2.4 2.4 2.4h64.9c1.3 0 2.4-1.1 2.4-2.4v-45.9c0-1.3-1.1-2.4-2.4-2.4h-64.9zm2.4 4.8h60.2v1.2l-30.1 22-30.1-22v-1.2zm0 7l28.7 21c0.8 0.6 2 0.6 2.8 0l28.7-21v34.1h-60.2v-34.1z" />
+												</g>
+												<rect class="st0" width="100" height="100" />
+											</svg>
+										</div>
+									</div>
+									<div class="floating-label">
+										<input placeholder="Password" type="password" name="password" id="password"
+											autocomplete="off" style="color:lightgray">
+										<label for="password">Password:</label>
+										<div class="icon">
+
+											<?xml version="1.0" encoding="UTF-8"?>
+											<svg enable-background="new 0 0 24 24" version="1.1" viewBox="0 0 24 24"
+												xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+												<style type="text/css">
+													.st0 {
+														fill: none;
+													}
+
+													.st1 {
+														fill: #010101;
+													}
+												</style>
+												<rect class="st0" width="24" height="24" />
+												<path class="st1" d="M19,21H5V9h14V21z M6,20h12V10H6V20z" />
+												<path class="st1"
+													d="M16.5,10h-1V7c0-1.9-1.6-3.5-3.5-3.5S8.5,5.1,8.5,7v3h-1V7c0-2.5,2-4.5,4.5-4.5s4.5,2,4.5,4.5V10z" />
+												<path class="st1"
+													d="m12 16.5c-0.8 0-1.5-0.7-1.5-1.5s0.7-1.5 1.5-1.5 1.5 0.7 1.5 1.5-0.7 1.5-1.5 1.5zm0-2c-0.3 0-0.5 0.2-0.5 0.5s0.2 0.5 0.5 0.5 0.5-0.2 0.5-0.5-0.2-0.5-0.5-0.5z" />
+											</svg>
+										</div>
+
+									</div>
+								<br>
+								<button onClick="sign1();" id="authbutton">Signup</button>
+									<a href="https://www.loflabs.com/terms-and-conditions-1" class="discrete"
+										target="_blank">Terms & Conditions</a>
 							</div>
 							</div>
-		
+						</div>
+
 					</div>
 
 
 
 					<div id="Search" class="tabcontent1">
-						<iframe src="./search/pre-made.html" frameborder="0" style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0);"></iframe>
+						<iframe src="./search/pre-made.html" frameborder="0"
+							style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0);"></iframe>
 					</div>
 
 					<div id="feedback" class="tabcontent1">
 						<div class="container">
 
-							<div style = "	margin: 2rem auto;
+							<div style="	margin: 2rem auto;
 							display: flex;
 							flex-direction: column;
 							width: 100%;
@@ -409,22 +448,22 @@
 							border-radius: 10px;
 							box-shadow: 0 10px 20px 0 rgba(#999, .25);
 							padding: .75rem;">
-								<div style = "border-radius: 8px;
+								<div style="border-radius: 8px;
 							overflow: hidden;
 							padding-bottom: 55%;
 							background-image: url('https://halonex.github.io/src/3.png');
 							background-repeat: no-repeat;
 							background-size: 100%;
 							position: relative;
-							object-fit: cover;">	
+							object-fit: cover;">
 								</div>
-								<form style = "padding: 2rem 1rem 0;">
-												<div style = "display: flex;
+								<form style="padding: 2rem 1rem 0;">
+									<div style="display: flex;
 						  flex-direction: column-reverse;
 						  position: relative;
 						  padding-top: 1.5rem;">
-										<input type="text" class="in-field" style = "appearance: none;
-							border-radius: 0; color: black;" value="" required/>
+										<input type="text" class="in-field" style="appearance: none;
+							border-radius: 0; color: black;" value="" required />
 										<label class="in-label">Feedback</label>
 									</div>
 									<div class="action">
@@ -436,7 +475,7 @@
 								</div>
 							</div>
 						</div>
-											
+
 					</div>
 
 					<div id="Connect" class="tabcontent1" style="background-color:#f2f2f2;">
@@ -521,63 +560,14 @@
 			</main>
 		</div>
 	</div>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
 	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-	<script src="./auth.js"></script>
 	<script src="m.js"></script>
-	<script>  
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDXAZU-U5VLwRdp-CEPuLubO1tJ996cbTo",
-    authDomain: "halonex-companion.firebaseapp.com",
-    databaseURL: "https://halonex-companion-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "halonex-companion",
-    storageBucket: "halonex-companion.appspot.com",
-    messagingSenderId: "339446753160",
-    appId: "1:339446753160:web:32a6a61a3ee0065cd5fc3d",
-    measurementId: "G-6J7ZEE5YKJ"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in 
-    window.alert("account created");
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
-  });
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
-  window.alert("this is working22");
-	</script>
 </body>
 
 </html>
