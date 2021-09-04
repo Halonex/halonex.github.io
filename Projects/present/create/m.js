@@ -83,6 +83,20 @@ function openPage1(pageName, elmnt, color) {
     elmnt.style.backgroundColor = color;
 }
 
+function openPage2(pageName, elmnt, color) {
+    var i, tabcontent1, tablinks1;
+    tabcontent1 = document.getElementsByClassName("tabcontent2");
+    for (i = 0; i < tabcontent1.length; i++) {
+        tabcontent1[i].style.display = "none";
+    }
+    tablinks1 = document.getElementsByClassName("tablink2");
+    for (i = 0; i < tablinks1.length; i++) {
+        tablinks1[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+}
+
 document.getElementById("defaultOpen").click();
 
 var firebaseConfig = {

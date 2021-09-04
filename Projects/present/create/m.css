@@ -415,6 +415,17 @@ html {
     font-size: 17px;
     width: 25%;
 }
+.tablink2 {
+    background-color: rgba(17, 24, 39);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
 
 .tablink1 {
     background-color: rgba(17, 24, 39);
@@ -451,6 +462,13 @@ html {
 }
 
 .tabcontent1 {
+    color: white;
+    display: none;
+    padding: 80px 20px;
+    height: 100%;
+    width: 100%;
+}
+.tabcontent2 {
     color: white;
     display: none;
     padding: 80px 20px;
