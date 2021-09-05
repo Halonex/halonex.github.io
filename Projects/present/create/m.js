@@ -1,5 +1,33 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyCy89ifV9bScL0PLP47RXbSKFirVwineyo",
+    authDomain: "halonex-companion-usa.firebaseapp.com",
+    databaseURL: "https://halonex-companion-usa-default-rtdb.firebaseio.com",
+    projectId: "halonex-companion-usa",
+    storageBucket: "halonex-companion-usa.appspot.com",
+    messagingSenderId: "109538181074",
+    appId: "1:109538181074:web:06e4f1bd75a8b2bf11520b",
+    measurementId: "G-FRPTL926XE"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+firebase.analytics();
+
+
+
 
 var cssvalues;
+var activeFlag = 1;
+document.getElementById("defaultOpen").click();
+var activeFlag = 0;
+
+
+document.getElementById("defaultOpen1").click();
+document.getElementById("defaultOpen2").click();
+
+
+
+
 
 function update() {
     document.getElementById("screen1").innerHTML = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value.replaceAll("body", ".screen1") + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
@@ -52,25 +80,27 @@ function dragElement(element, direction) {
 
 dragElement(document.getElementById("separator"), "H");
 
-
 function openPage(pageName, elmnt, color) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    if (activeFlag == 1) {
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
     }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
 }
 
-document.getElementById("defaultOpen").click();
+
 
 function openPage1(pageName, elmnt, color) {
     var i, tabcontent1, tablinks1;
+
     tabcontent1 = document.getElementsByClassName("tabcontent1");
     for (i = 0; i < tabcontent1.length; i++) {
         tabcontent1[i].style.display = "none";
@@ -81,56 +111,28 @@ function openPage1(pageName, elmnt, color) {
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
+
+
 }
 
+
 function openPage2(pageName, elmnt, color) {
-    var i, tabcontent1, tablinks1;
-    tabcontent1 = document.getElementsByClassName("tabcontent2");
-    for (i = 0; i < tabcontent1.length; i++) {
-        tabcontent1[i].style.display = "none";
+    var i, tabcontent2, tablinks2;
+
+    tabcontent2 = document.getElementsByClassName("tabcontent2");
+    for (i = 0; i < tabcontent2.length; i++) {
+        tabcontent2[i].style.display = "none";
     }
-    tablinks1 = document.getElementsByClassName("tablink2");
-    for (i = 0; i < tablinks1.length; i++) {
-        tablinks1[i].style.backgroundColor = "";
+    tablinks2 = document.getElementsByClassName("tablink2");
+    for (i = 0; i < tablinks2.length; i++) {
+        tablinks2[i].style.backgroundColor = "";
     }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
-}
-
-document.getElementById("defaultOpen").click();
-
-var firebaseConfig = {
-    apiKey: "AIzaSyCy89ifV9bScL0PLP47RXbSKFirVwineyo",
-    authDomain: "halonex-companion-usa.firebaseapp.com",
-    databaseURL: "https://halonex-companion-usa-default-rtdb.firebaseio.com",
-    projectId: "halonex-companion-usa",
-    storageBucket: "halonex-companion-usa.appspot.com",
-    messagingSenderId: "109538181074",
-    appId: "1:109538181074:web:06e4f1bd75a8b2bf11520b",
-    measurementId: "G-FRPTL926XE"
-};
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-
-	const sign1 = () => {
-
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-  firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
-	console.log("Signed in");
-    window.alert("account created");
-    var user = userCredential.user;
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-	window.alert(errorMessage);
-  });
-
 
 }
+
+
 
 
 function writeUserData(userId, h, c, j) {
@@ -147,6 +149,7 @@ function check11() {
 click_event = new CustomEvent('click');
 btn_element = document.querySelector('#do');
 btn_element.dispatchEvent(click_event);
+activeFlag = 0;
 
 
 var tim = setInterval(clickButton, 1000);
@@ -164,3 +167,54 @@ function clickButton() {
     }
 }
 
+
+
+
+function sign1() {
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
+        activeFlag = 1;
+        console.log("Signed in");
+        openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
+        openPage('About', document.getElementById("authbutton"), 'red');
+        var user = userCredential.user;
+    })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            window.alert(errorMessage);
+        });
+
+
+}
+
+function githubSignInPopup1() {
+
+    var provider = new firebase.auth.GithubAuthProvider();
+
+firebase
+  .auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    var credential = result.credential;
+
+    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    var token = credential.accessToken;
+
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+}

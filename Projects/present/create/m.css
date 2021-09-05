@@ -413,7 +413,7 @@ html {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 20%;
 }
 .tablink2 {
     background-color: rgba(17, 24, 39);
@@ -815,11 +815,11 @@ background-color:#f2f2f2;
     -webkit-appearance: none;
     width: auto;
     min-width: 100px;
-    border-radius: 24px;
+    border-radius: 14px;
     text-align: center;
     padding: 15px 40px;
     margin-top: 5px;
-    background-color: #b08bf8;
+    background-color: #ff0000;
     color: #fff;
     font-size: 14px;
     margin-left: auto;
@@ -998,7 +998,7 @@ background-color:#f2f2f2;
     height: auto;
     min-height: 100%;
     position: relative;
-    background-image: url("https://lh4.googleusercontent.com/UGl78VsPE5Q9kS2PGMqWugxkOPaYMcxrG9v6TLy_8h90rt2hAJbxP-Z5qfDI1UHlr7pIxNIH1m8axA=w1920-h990");
+    background-image: url("https://gdurl.com/sFmBE");
     background-size: cover;
     background-position: center;
     border-top-left-radius: 4px;
