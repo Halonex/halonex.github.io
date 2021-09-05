@@ -167,12 +167,11 @@ function clickButton() {
     }
 }
 
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
-
-
 
 function sign1() {
+
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
         activeFlag = 1;
@@ -224,6 +223,9 @@ firebase
 }
 
 function signInWithEmailPassword() {
+
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
