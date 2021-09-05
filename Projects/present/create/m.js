@@ -178,6 +178,7 @@ function sign1() {
         console.log("Signed in");
         openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
         openPage('About', document.getElementById("authbutton"), 'red');
+        succLogin()
         var user = userCredential.user;
     })
         .catch((error) => {
@@ -204,6 +205,7 @@ firebase
     var token = credential.accessToken;
     console.log("token");
     console.log(token);
+    succLogin()
     // The signed-in user info.
     var user = result.user;
     console.log("user");
@@ -233,6 +235,7 @@ function signInWithEmailPassword() {
     console.log("Signed in");
     openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
     openPage('About', document.getElementById("authbutton"), 'red');
+    succLogin()
     var user = userCredential.user;
         // ...
       })
@@ -241,4 +244,9 @@ function signInWithEmailPassword() {
         var errorMessage = error.message;
         window.alert(errorMessage);
       });
+  }
+
+
+  function succLogin(){
+      openPage2('applist',document.getElementById("authbutton"),'red');
   }
