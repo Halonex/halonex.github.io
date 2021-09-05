@@ -167,13 +167,12 @@ function clickButton() {
     }
 }
 
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
 
 
 
 function sign1() {
-
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
         activeFlag = 1;
@@ -200,21 +199,44 @@ firebase
   .signInWithPopup(provider)
   .then((result) => {
     var credential = result.credential;
-
+    console.log("credential");
+    console.log(credential);
     // This gives you a GitHub Access Token. You can use it to access the GitHub API.
     var token = credential.accessToken;
-
+    console.log("token");
+    console.log(token);
     // The signed-in user info.
     var user = result.user;
-    // ...
+    console.log("user");
+    console.log(user);
+    activeFlag = 1;
+    console.log("Signed in");
+    openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
+    openPage('About', document.getElementById("authbutton"), 'red');
+
   }).catch((error) => {
-    // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-    // The email of the user's account used.
     var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
-    // ...
+    window.alert(errorMessage);
   });
 }
+
+function signInWithEmailPassword() {
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+    activeFlag = 1;
+    console.log("Signed in");
+    openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
+    openPage('About', document.getElementById("authbutton"), 'red');
+    var user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        window.alert(errorMessage);
+      });
+  }
