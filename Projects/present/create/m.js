@@ -199,17 +199,8 @@ function githubSignInPopup1() {
 
     firebase.auth().signInWithPopup(provider).then((result) => {
         var credential = result.credential;
-        console.log("credential");
-        console.log(credential);
-        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
         var token = credential.accessToken;
-        console.log("token");
-        console.log(token);
-        succLogin()
-        // The signed-in user info.
         var user = result.user;
-        console.log("user");
-        console.log(user);
         console.log("Signed in");
         succLogin();
 
@@ -258,3 +249,26 @@ firebase.auth().onAuthStateChanged((user) => {
 
     }
 });
+
+var provider1 = new firebase.auth.GoogleAuthProvider();
+
+function googleSignInPopup() {
+
+    var provider1 = new firebase.auth.GoogleAuthProvider();
+
+    firebase.auth().signInWithPopup(provider1).then((result) => {
+        var credential = result.credential;
+
+        var token = credential.accessToken;
+        var user = result.user;
+        succLogin();
+      }).catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+        var email = error.email;
+   
+        var credential = error.credential;
+    
+      });
+  }
