@@ -23,9 +23,8 @@
 			<button class="tablink" onclick="openPage('Home', this, 'red')">HTML</button>
 			<button class="tablink" onclick="openPage('News', this, 'red')">CSS</button>
 			<button class="tablink" onclick="openPage('Contact', this, 'red')">JavaScript</button>
-			<button class="tablink" onclick="openPage('project', this, 'red')" id="defaultOpen">Projects</button>
-			<button class="tablink" onclick="openPage('About', this, 'orange');">Dashboard</button>
-
+			<button class="tablink" onclick="openPage('About', this, 'red');">Dashboard</button>
+			<button class="tablink" onclick="openPage('project', this, 'orange')" id="defaultOpen">Projects</button>
 
 			<div id="Home" class="tabcontent">
 				<br>
@@ -51,82 +50,7 @@
 					placeholder="//Start typing your JavaScript scripts"></textarea>
 			</div>
 
-			<div id="project" class="tabcontent" style="padding-bottom: 0px; padding-left:0px;padding-right:0px;">
-
-				<div id="applist" class="tabcontent2" style="height: 100%; width: 100%; background-color:#262a2b; overflow : scroll">
-					
-					<ul class="tilesWrap">
-						<li>
-							<h2>01</h2>
-							<h3>Title 1</h3>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting   
-								industry. Lorem Ipsum has been the industry's standard dummy text ever 
-								since the 1500s.
-							</p>
-							<button>Read more</button>
-						</li>
-						<li>
-							<h2>01</h2>
-							<h3>Title 1</h3>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting   
-								industry. Lorem Ipsum has been the industry's standard dummy text ever 
-								since the 1500s.
-							</p>
-							<button>Read more</button>
-						</li>
-						<li>
-							<h2>01</h2>
-							<h3>Title 1</h3>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting   
-								industry. Lorem Ipsum has been the industry's standard dummy text ever 
-								since the 1500s.
-							</p>
-							<button>Read more</button>
-						</li>
-						<li>
-							<h2>01</h2>
-							<h3>Title 1</h3>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting   
-								industry. Lorem Ipsum has been the industry's standard dummy text ever 
-								since the 1500s.
-							</p>
-							<button>Read more</button>
-						</li>
-						<li>
-							<h2>02</h2>
-							<h3>Title 2</h3>
-							<p>
-								When an unknown printer took a galley of type and scrambled it to make 
-								a type specimen book. It has survived not only five centuries.
-							</p>
-							<button>Read more</button>
-						</li>
-						<li>
-							<h2>03</h2>
-							<h3>Title 3</h3>
-							<p>
-								But also the leap into electronic typesetting, remaining essentially 
-								unchanged. It was popularised in the 1960s.
-							</p>
-							<button>Read more</button>
-						</li>
-						<li>
-							<h2>04</h2>
-							<h3>Title 4</h3>
-							<p>
-								With the release of Letraset sheets containing Lorem Ipsum passages,  
-								and more recently with desktop publishing software like Aldus PageMaker 
-								including versions of Lorem Ipsum.
-							</p>
-							<button>Read more</button>
-						</li>
-					</ul>
-
-				</div>
+			<div id="project" class="tabcontent" style="padding-bottom: 0px; padding-left:0px;padding-right:0px; padding-top: 0px;">
 
 				<div id="authup" class="tabcontent2" style="height: 100%; width: 100%; padding: 0px; margin: 0px;">
 					<div id="logauth" style="padding: 0px; margin: 0px;">
@@ -182,26 +106,57 @@
 												d="m12 16.5c-0.8 0-1.5-0.7-1.5-1.5s0.7-1.5 1.5-1.5 1.5 0.7 1.5 1.5-0.7 1.5-1.5 1.5zm0-2c-0.3 0-0.5 0.2-0.5 0.5s0.2 0.5 0.5 0.5 0.5-0.2 0.5-0.5-0.2-0.5-0.5-0.5z" />
 										</svg>
 									</div>
-
 								</div>
 								<br>
 								<div>
-								<button onclick="signInWithEmailPassword(); " id="authbutton">Login</button>
-								<button onclick="sign1(); " id="authbutton">Signup</button>
+									<button onclick="signInWithEmailPassword(); " id="authbutton">Login</button>
+									<button onclick="sign1(); " id="authbutton">Signup</button>
 								</div>
 								<hr>
 								<br>
-								<div>
-									
-								<button onclick = "githubSignInPopup1();" style="background-image: url('https://coderwall-assets-0.s3.amazonaws.com/uploads/picture/file/4363/github.png'); width: 170px; height:40px; background-size: cover; margin-right: 10px;"></button>
-								<button onclick = "" style="background-image: url('https://developers.google.com/identity/images/g-logo.png'); width: 32px; height:32px; background-size: cover; margin-right: 20px;" ></button>
-								<button style="background-image: url('https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/images/white-logo-masked-rounded-rect_2x.png');border-radius: 10px; background-position: center; width: 32px; height:32px; background-size: cover;"></button>
+								<div style="display: flex; padding: 10px; border-bottom: 5px whitesmoke dashed;">
+
+									<div onclick="githubSignInPopup1();"
+										style=" background-image: url('https://coderwall-assets-0.s3.amazonaws.com/uploads/picture/file/4363/github.png'); width: 170px; height:50px; background-size: cover; margin-right: 10px;"></div>
+										<div  style="display: flex; padding: 10px;">
+										<div onclick=""
+										style="background-image: url('https://developers.google.com/identity/images/g-logo.png'); width: 32px; height:32px; background-size: cover; margin-right: 20px;"></div>
+									<div
+										style="background-image: url('https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/images/white-logo-masked-rounded-rect_2x.png');border-radius: 10px; background-position: center; width: 32px; height:32px; background-size: cover;"></div>
 								</div>
+							</div>
 								<a href="https://www.loflabs.com/terms-and-conditions-1" class="discrete"
 									target="_blank">Terms & Conditions</a>
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div id="applist" class="tabcontent2"
+					style="height: 100%; width: 100%; background-color:#262a2b; overflow : scroll; padding: 10px;margin: 0;background-color: #eaeaea;display: grid;place-items: center;font-family: 'Source Sans Pro', sans-serif;">
+
+					<article class="leaderboard" style="width:100%;height:100%;">
+						<header>
+							<br>
+							<h1 class="leaderboard__title"><span class="leaderboard__title--top">MY Projects</span>
+								<span class="leaderboard__title--bottom">Select app </span>
+							</h1>
+						</header>
+						<div class = "appmenubar">
+							<button class = "appmenu1">New app</button>
+							<button class = "appmenu1">Export all</button>
+						</div>
+
+						<div id="main22" class="leaderboard__profiles"
+							style="overflow-y : scroll; overflow-x:hidden; height:70vh;">
+							<article class="leaderboard__profile">
+								<span class="leaderboard__name"><b>App Name</b></span>
+								<span class="leaderboard__value">Date<span>Last edited</span></span>
+							</article>
+						</div>
+
+
+					</article>
 				</div>
 
 			</div>
@@ -298,7 +253,7 @@
 						</div>
 					</div>
 					<a class="flex items-center justify-center w-full h-16 mt-auto bg-gray-800 hover:bg-gray-700 hover:text-gray-300 tablink1"
-						href="#" onclick="openPage1('authup', this, 'red');openPage('project', this, 'red')"
+						href="#" onclick="openPage('project', this, 'red')"
 						id="defaultOpen1">
 						<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none"
 							viewBox="0 0 24 24" stroke="currentColor">
@@ -466,7 +421,7 @@
 										<label class="in-label">Feedback</label>
 									</div>
 									<div class="action">
-										<button class="action-button">Submit</button>
+										<div class="action-button" style = "text-align: center;">Submit</div>
 									</div>
 								</form>
 								<div class="card-info">
@@ -481,7 +436,7 @@
 						<div class="center">
 							<div class="property-card">
 								<a href="#">
-									<div class="property-image">
+									<div class="property-image" id = "usrQR">
 										<div class="property-image-title">
 										</div>
 									</div>
@@ -517,9 +472,9 @@
 
 
 		<div id="separator"></div>
+		
 
-		<div id="second" style="padding-top: 400px;">
-
+		<div id="second" style="padding-top: 25%;">
 			<main>
 				<div class="iphonex">
 					<div class="front">

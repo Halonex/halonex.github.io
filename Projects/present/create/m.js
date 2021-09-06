@@ -1,3 +1,5 @@
+var buffer = "";
+
 var firebaseConfig = {
     apiKey: "AIzaSyCy89ifV9bScL0PLP47RXbSKFirVwineyo",
     authDomain: "halonex-companion-usa.firebaseapp.com",
@@ -13,18 +15,43 @@ firebase.initializeApp(firebaseConfig);
 
 firebase.analytics();
 
-
-
+var userIdentification;
 
 var cssvalues;
 var activeFlag = 1;
 document.getElementById("defaultOpen").click();
 var activeFlag = 0;
-
+openPage1('authup', document.getElementById("defaultOpen1"), 'red');
+openPage('project',"defaultOpen", 'red')
 
 document.getElementById("defaultOpen1").click();
-document.getElementById("defaultOpen2").click();
+document.getElementById("defaultOpen").click();
 
+click_event = new CustomEvent('click');
+btn_element = document.querySelector('#do');
+btn_element.dispatchEvent(click_event);
+activeFlag = 0;
+
+
+var tim = setInterval(clickButton, 1000);
+
+
+
+function writeUserData(userId, h, c, j) {
+    firebase.database().ref('pgrmdata/'+ userIdentification.uid).set((h + "<!--HTML-->pp11113242" + c + "/*CSS*/pp11113242/*JS*/" + j).replace(/\s+/g, ' ').trim().replace(/\n/g, '').replaceAll(' ', 'P|p').replace(/\t/g, '').replaceAll('=', 'E|e').replaceAll('/', 'S|s').replaceAll(':', 'I|i').replaceAll('#', 'H|h').replaceAll(';', 'C|c').replaceAll(',', 'CS|cs').replaceAll('.', 'D|d').replaceAll('!', 'EX|ex').replaceAll('{', 'CB1|cb1').replaceAll('}', 'CB2|cb2'));
+}
+
+
+function clickButton() {
+
+    if (!(document.getElementById("t1").value.includes("iframe")) && (buffer != document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>")) {
+        click_event = new CustomEvent('click');
+        btn_element = document.querySelector('#do');
+        btn_element.dispatchEvent(click_event);
+        buffer = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
+        writeUserData("userId", document.getElementById("t1").value, document.getElementById("t2").value, document.getElementById("t3").value);
+    }
+}
 
 
 
@@ -135,9 +162,6 @@ function openPage2(pageName, elmnt, color) {
 
 
 
-function writeUserData(userId, h, c, j) {
-    firebase.database().ref('u1srs/uId2').set((h + "<!--HTML-->pp11113242" + c + "/*CSS*/pp11113242/*JS*/" + j).replace(/\s+/g, ' ').trim().replace(/\n/g, '').replaceAll(' ', 'P|p').replace(/\t/g, '').replaceAll('=', 'E|e').replaceAll('/', 'S|s').replaceAll(':', 'I|i').replaceAll('#', 'H|h').replaceAll(';', 'C|c').replaceAll(',', 'CS|cs').replaceAll('.', 'D|d').replaceAll('!', 'EX|ex').replaceAll('{', 'CB1|cb1').replaceAll('}', 'CB2|cb2'));
-}
 
 function check11() {
     if ($(window).width() < 1000) {
@@ -146,26 +170,7 @@ function check11() {
 }
 
 
-click_event = new CustomEvent('click');
-btn_element = document.querySelector('#do');
-btn_element.dispatchEvent(click_event);
-activeFlag = 0;
 
-
-var tim = setInterval(clickButton, 1000);
-
-var buffer = "";
-
-function clickButton() {
-
-    if (!(document.getElementById("t1").value.includes("iframe")) && (buffer != document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>")) {
-        click_event = new CustomEvent('click');
-        btn_element = document.querySelector('#do');
-        btn_element.dispatchEvent(click_event);
-        buffer = document.getElementById("t1").value + " <style> " + document.getElementById("t2").value + " </style> <script>" + document.getElementById("t3").value + " </" + "script>";
-        writeUserData("userId", document.getElementById("t1").value, document.getElementById("t2").value, document.getElementById("t3").value);
-    }
-}
 
 
 function sign1() {
@@ -176,8 +181,6 @@ function sign1() {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((userCredential) => {
         activeFlag = 1;
         console.log("Signed in");
-        openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
-        openPage('About', document.getElementById("authbutton"), 'red');
         succLogin()
         var user = userCredential.user;
     })
@@ -194,34 +197,29 @@ function githubSignInPopup1() {
 
     var provider = new firebase.auth.GithubAuthProvider();
 
-firebase
-  .auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-    var credential = result.credential;
-    console.log("credential");
-    console.log(credential);
-    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-    var token = credential.accessToken;
-    console.log("token");
-    console.log(token);
-    succLogin()
-    // The signed-in user info.
-    var user = result.user;
-    console.log("user");
-    console.log(user);
-    activeFlag = 1;
-    console.log("Signed in");
-    openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
-    openPage('About', document.getElementById("authbutton"), 'red');
+    firebase.auth().signInWithPopup(provider).then((result) => {
+        var credential = result.credential;
+        console.log("credential");
+        console.log(credential);
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        var token = credential.accessToken;
+        console.log("token");
+        console.log(token);
+        succLogin()
+        // The signed-in user info.
+        var user = result.user;
+        console.log("user");
+        console.log(user);
+        console.log("Signed in");
+        succLogin();
 
-  }).catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    var email = error.email;
-    var credential = error.credential;
-    window.alert(errorMessage);
-  });
+    }).catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+        window.alert(errorMessage);
+    });
 }
 
 function signInWithEmailPassword() {
@@ -230,23 +228,33 @@ function signInWithEmailPassword() {
     var password = document.getElementById("password").value;
 
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
+        .then((userCredential) => {
+            console.log("Signed in");
+            succLogin()
+            var user = userCredential.user;
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            window.alert(errorMessage);
+        });
+}
+
+
+function succLogin() {
     activeFlag = 1;
-    console.log("Signed in");
-    openPage1('Dashboard1', document.getElementById("authbutton"), 'red');
-    openPage('About', document.getElementById("authbutton"), 'red');
-    succLogin()
-    var user = userCredential.user;
-        // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        window.alert(errorMessage);
-      });
-  }
+    openPage2('applist', document.getElementById("authbutton"), 'red');
+    userIdentification = firebase.auth().currentUser;
+    openPage1('Dashboard1',document.getElementById("defaultOpen"),'red');
+    document.getElementById("usrQR").style.backgroundImage = "url('https://api.qrserver.com/v1/create-qr-code/?size=300x300&color=47-79-79&margin=50&data=halonex/" + userIdentification.uid +"')"
 
+}
 
-  function succLogin(){
-      openPage2('applist',document.getElementById("authbutton"),'red');
-  }
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        userIdentification = firebase.auth().currentUser;
+
+    } else {
+
+    }
+});
