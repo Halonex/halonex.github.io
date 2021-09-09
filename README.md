@@ -4,6 +4,15 @@ Welcome to Halonex
 
 Halonex Project enables web developers to create mobile apps (Android and iOS) using HTML and JavaScript, we created and embedded libraries of functions for JavaScript to natively interact with the Mobile platforms and hardware that otherwise is impossible with a site running in a mobile browser. 
 
+IDE : https://halonex.github.io/Projects/present/create/mobile
+
+Main Page : https://halonex.github.io
+
+Syntax Highlighters : https://halonex.github.io/Projects/present/d-create
+
+Responsive MacOS theme site design : https://halonex.github.io/Projects/present/embed
+
+
 MIT License
 
 Copyright (c) 2021 Halonex
