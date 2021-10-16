@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bootstrap Vertical Navigation with expand and collapse exam window</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+        
+        
+        
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-user navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span>  Dominic Walter</a></li>
+          <li><a href="#about"><span class="glyphicon glyphicon-log-out"></span> Submit</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+<div class="main-content" style = "">
+  <div class = "question">
+<h1 id = "QuesNo">Question</h1>
+<p id = "QuesMain">When is the independence day?</p>
+  </div>
+  <div class = "options" id = "OptiMain"></div>
+  
+  
+  <div class="rows container-fluid buttons" style="margin-bottom:0; bottom:0;position:absolute;">
+<div class="col-sm-3">
+<center>
+<button id="submit" type="button" class="btn btn-primary" onclick="submitgreen();">
+Submit
+</button>
+</center>
+</div>
+<div class="col-sm-3">
+<center>
+<button id="mark" type="button" class="btn btn-info" onclick="markpurple();">
+Mark
+</button>
+</center>
+</div>
+<div class="col-sm-3">
+<center>
+<button id="unmark" type="button" class="btn btn-info" onclick="unmark();">
+Unmark
+</button>
+</center>
+</div>
+<div class="col-sm-3">
+<center>
+<button id="undo" type="button" class="btn btn-warning" onclick="undo();">
+Undo
+</button>
+</center>
+</div>
+</div>
+</div>
+
+
+</div>
+<nav class="navbar-primary">
+<a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
+<ul class="navbar-primary-menu">
+  <li>
+    <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Questions</span></a>
+  </li>
+</ul>
+<ul class="container1 float" id = "qBpan">
+</ul>
+</nav>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
