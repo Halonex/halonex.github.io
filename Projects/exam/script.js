@@ -116,3 +116,7 @@ function res(){
     }
      
 }
+
+function loadQn(){
+    
+}
