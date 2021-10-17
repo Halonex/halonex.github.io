@@ -293,11 +293,12 @@
 	position:absolute;
     width: 100%;
     height:100%;
-    background:rgb(255,0,0,0.7);
-    background-image: linear-gradient(rgb(255,0,0,0.7), rgba(0, 0, 0, 0.7));
     z-index:234;
     -ms-transform: translate(-0px, -10px);
     transform: translate(-0px, -10px);
+    color:white;
+    text-align: center;
+    visibility: hidden;
 }
 
 .ocen{
@@ -307,4 +308,12 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.errorOverlay{
+    background-image: linear-gradient(rgb(255,0,0,0.7), rgba(0, 0, 0, 0.7));
+}
+
+.successOverlay{
+    background-image: linear-gradient(rgb(0,150,136,1), rgba(0, 0, 0, 0.9));
 }
