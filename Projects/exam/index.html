@@ -1,125 +1,158 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Halonex Exam Solutions</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>Halonex Exam Solutions</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button> 
-        
-        
-        
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-user navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span>  Dominic Walter</a></li>
-          <li onclick="qu();"><a href="#about"><span class="glyphicon glyphicon-log-out"></span> Submit</a></li>
+    
+    
+    <!-- Overlay Codes -->
+
+
+
+    <div class = "overlay" style = "color:white; text-align: center;"><div class = "ocen"><p style = "color:white;font-size: 40px;">No internet</p> Enabling Offline Mode...</div></div>
+
+
+    <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-user navbar-right">
+                    <li><a href="#" id = "timerDis">Remaining : 23:42</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Dominic Walter</a></li>
+                    <li onclick="qu();"><a href="#about"><span class="glyphicon glyphicon-log-out"></span> Submit</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="main-content" style="margin-right: 300px;">
+        <div class="question">
+            <h1 id="QuesNo">Instructions</h1>
+            <hr>
+            <p id="QuesMain">This project is still under development. here are the set of instructions that should be
+                followed for this exam</p>
+        </div>
+
+
+
+        <ul class="optui">
+            <li class="optui" onclick="optSel(1)">
+                <input type="radio" id="option1" name="selector">
+                <label for="option1" id="1option">Submit your responses on or before the timer reaches 0</label>
+
+                <div class="check"></div>
+            </li>
+
+            <li class="optui" onclick="optSel(2)">
+                <input type="radio" id="option2" name="selector">
+                <label for="option2" id="2option">4 marks for every correct answer</label>
+
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+
+            <li class="optui" onclick="optSel(3)">
+                <input type="radio" id="option3" name="selector">
+                <label for="option3" id="3option">-1 for every wrong answer</label>
+
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+
+            <li class="optui" onclick="optSel(4)">
+                <input type="radio" id="option4" name="selector">
+                <label for="option4" id="4option"> 0 marks if not attended</label>
+
+                <div class="check">
+                    <div class="inside"></div>
+                </div>
+            </li>
+
         </ul>
-      </div><!--/.nav-collapse -->
+
+
+
+
+
+        <div class="rows container-fluid buttons" style="margin-bottom:0; bottom:0;position:absolute;">
+            <div class="col-sm-3">
+                <center>
+                    <button id="submit" type="button" class="btn btn-primary" onclick="submitgreen();">
+                        Submit
+                    </button>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <center>
+                    <button id="mark" type="button" class="btn btn-info" onclick="markpurple();">
+                        Mark for review
+                    </button>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <center>
+                    <button id="unmark" type="button" class="btn btn-info" onclick="unmark();">
+                        Unmark
+                    </button>
+                </center>
+            </div>
+            <div class="col-sm-3">
+                <center>
+                    <button id="undo" type="button" class="btn btn-warning" onclick="undo();">
+                        Clear response
+                    </button>
+                </center>
+            </div>
+        </div>
     </div>
-  </nav>
-
-<div class="main-content" style = "margin-right: 300px;">
-  <div class = "question">
-<h1 id = "QuesNo">Instructions</h1><hr>
-<p id = "QuesMain">This project is still under development. here are the set of instructions that should be followed for this exam</p>
-  </div>
 
 
-   
-        <ul class = "optui">
-    <li class = "optui" onclick="optSel(1)">
-      <input type="radio" id="option1" name="selector" >
-      <label for="option1" id="1option">Submit your responses on or before the timer reaches 0</label>
-      
-      <div class="check"></div>
-    </li>
+    </div>
+    <nav class="navbar-primary">
+        <a href="#" class="btn-expand-collapse" onclick="res();"><span class="glyphicon glyphicon-menu-left"></span></a>
+        <ul class="navbar-primary-menu">
+            <li>
+                <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span
+                        class="nav-label">Questions</span></a>
+            </li>
+        </ul>
+        <ul class="container1 float" id="qBpan">
+        </ul>
+    </nav>
     
-    <li class = "optui" onclick="optSel(2)">
-      <input type="radio" id="option2" name="selector">
-      <label for="option2" id="2option">4 marks for every correct answer</label>
-      
-      <div class="check"><div class="inside"></div></div>
-    </li>
-    
-    <li class = "optui" onclick="optSel(3)">
-      <input type="radio" id="option3" name="selector">
-      <label for="option3" id="3option">-1 for every wrong answer</label>
-      
-      <div class="check"><div class="inside"></div></div>
-    </li>
-          
-          <li class = "optui" onclick="optSel(4)">
-      <input type="radio" id="option4" name="selector">
-      <label for="option4" id="4option"> 0 marks if not attended</label>
-      
-      <div class="check"><div class="inside"></div></div>
-    </li>
-          
-  </ul>
 
 
-  
-
-  
-  <div class="rows container-fluid buttons" style="margin-bottom:0; bottom:0;position:absolute;">
-<div class="col-sm-3">
-<center>
-<button id="submit" type="button" class="btn btn-primary" onclick="submitgreen();">
-Submit
-</button>
-</center>
-</div>
-<div class="col-sm-3">
-<center>
-<button id="mark" type="button" class="btn btn-info" onclick="markpurple();">
-Mark for review
-</button>
-</center>
-</div>
-<div class="col-sm-3">
-<center>
-<button id="unmark" type="button" class="btn btn-info" onclick="unmark();">
-Unmark
-</button>
-</center>
-</div>
-<div class="col-sm-3">
-<center>
-<button id="undo" type="button" class="btn btn-warning" onclick="undo();">
-Clear response
-</button>
-</center>
-</div>
-</div>
-</div>
 
 
-</div>
-<nav class="navbar-primary">
-<a href="#" class="btn-expand-collapse" onclick="res();"><span class="glyphicon glyphicon-menu-left"></span></a>
-<ul class="navbar-primary-menu">
-  <li>
-    <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Questions</span></a>
-  </li>
-</ul>
-<ul class="container1 float" id = "qBpan">
-</ul>
-</nav>
-<!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="./script.js"></script>
 
 </body>
+
 </html>
