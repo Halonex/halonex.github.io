@@ -191,3 +191,100 @@
       cursor: pointer;
       height: 100%;
   }
+
+  
+  .Optcontainer{
+    display: block;
+    position: relative;
+    margin: 40px auto;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .Optcontainer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+      overflow: auto;
+  }
+  
+  .optui{
+    color: black;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+      border-bottom: 0.1px solid rgb(231, 231, 231);
+  }
+  
+  .optui input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .optui label{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 25px 25px 25px 80px;
+    margin: 10px auto;
+    height: auto;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+  }
+  
+  .optui:hover label{
+      color: #333;
+  }
+  
+  .optui .check{
+    display: block;
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 100%;
+    height: 21px;
+    width: 21px;
+    top: 30px;
+    left: 20px;
+      z-index: 5;
+      transition: border .25s linear;
+      -webkit-transition: border .25s linear;
+  }
+  
+  .optui:hover .check {
+    border: 3px solid #AAAAAA;
+  }
+  
+  .optui .check::before {
+    display: block;
+    position: absolute;
+      content: '';
+    border-radius: 100%;
+    height: 13px;
+    width: 13px;
+    top: 1px;
+      left: 1px;
+    margin: auto;
+      transition: background 0.25s linear;
+      -webkit-transition: background 0.25s linear;
+  }
+  
+  input[type=radio]:checked ~ .check {
+    border: 3px solid #009688FF;
+  }
+  
+  input[type=radio]:checked ~ .check::before{
+    background: #009688FF;
+  }
+  
+  input[type=radio]:checked ~ label{
+    color: #009688FF;
+  }
+
+  #QuesMain {
+      font-size: 15px;
+  }
