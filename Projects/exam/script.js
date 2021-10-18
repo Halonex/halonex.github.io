@@ -1,7 +1,93 @@
+responses = {};
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBXwIkKrsabwkwqQJNgs65f6UhPEfNBkjc",
+    authDomain: "halonex-exams.firebaseapp.com",
+    databaseURL: "https://halonex-exams-default-rtdb.firebaseio.com",
+    projectId: "halonex-exams",
+    storageBucket: "halonex-exams.appspot.com",
+    messagingSenderId: "119803462",
+    appId: "1:119803462:web:14eeaf057c0b5d1ee88447",
+    measurementId: "G-J0HX1VPS63"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+
+questions = {
+    1: ["who is the chief executive officer of LOF ?", "Dominic", "Walter", "Dominic Walter", "Dominic Walter T"],
+    2: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    3: ["The filament of a light bulb has surface area 64 mm2. The filament can be considered as a blackbody at temperature 2500 K emitting radiation like a point source when viewed from far. At nightthe light bulb is observed from a distance of 100 m. Assume the pupil of the eyes of the observer tobe circular with radius 3 mm. Then(Take Stefan-Boltzmann constant = 5.67 × 10−8 Wm−2K−4, Wien’s displacement constant =2.90 × 10−3 m-K, Planck’s constant = 6.63 × 10−34 Js, speed of light in vacuum = 3.00 ×108 ms−1)", "power radiated by the filament is in the range 642 W to 645 W", "The filament of a light bulb has surface area 64 mm2. ", "the wavelength corresponding to the maximum intensity of light is 1160 nm", "taking the average wavelength of emitted radiation to be 1740 nm, the total number of photons entering per second into one eye of the observer is in the range 2.75 × 1011 to 2.85 × 1011"],
+    4: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    5: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    6: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    7: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    8: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    9: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    10: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    11: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+    12: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
+};
+
 $('.btn-expand-collapse').click(function (e) {
     $('.navbar-primary').toggleClass('collapsed');
 
 });
+
+/* Code to avoid xss or code injection attacks and tampering attempts */
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+$('body').keydown(function (e) {
+    if (e.which == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.which == 73) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.which == 75) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.which == 67) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.which == 74) {
+        e.preventDefault();
+    }
+});
+!function () {
+    function detectDevTool(allow) {
+        if (isNaN(+allow)) allow = 100;
+        var start = +new Date();
+        debugger;
+        var end = +new Date();
+        if (isNaN(start) || isNaN(end) || end - start > allow) {
+            console.log('DEVTOOLS detected ' + allow);
+        }
+    }
+    if (window.attachEvent) {
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+            detectDevTool();
+            window.attachEvent('onresize', detectDevTool);
+            window.attachEvent('onmousemove', detectDevTool);
+            window.attachEvent('onfocus', detectDevTool);
+            window.attachEvent('onblur', detectDevTool);
+        } else {
+            setTimeout(argument.callee, 0);
+        }
+    } else {
+        window.addEventListener('load', detectDevTool);
+        window.addEventListener('resize', detectDevTool);
+        window.addEventListener('mousemove', detectDevTool);
+        window.addEventListener('focus', detectDevTool);
+        window.addEventListener('blur', detectDevTool);
+    }
+}();
+
+
+/*---- Code to avoid xss and code injection attacks and tampering attempts ends ----*/
+
+
+/*Exam window rendering functions and logics*/
 
 function addQnButton(n) {
     var cc = "qb" + n;
@@ -22,23 +108,6 @@ function unanswered(qn) {
     x = document.getElementById(qn);
     x.classList = "item unans float-item";
 }
-
-responses = {};
-
-questions = {
-    1: ["who is the chief executive officer of LOF ?", "Dominic", "Walter", "Dominic Walter", "Dominic Walter T"],
-    2: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    3: ["The filament of a light bulb has surface area 64 mm2. The filament can be considered as a blackbody at temperature 2500 K emitting radiation like a point source when viewed from far. At nightthe light bulb is observed from a distance of 100 m. Assume the pupil of the eyes of the observer tobe circular with radius 3 mm. Then(Take Stefan-Boltzmann constant = 5.67 × 10−8 Wm−2K−4, Wien’s displacement constant =2.90 × 10−3 m-K, Planck’s constant = 6.63 × 10−34 Js, speed of light in vacuum = 3.00 ×108 ms−1)", "power radiated by the filament is in the range 642 W to 645 W", "The filament of a light bulb has surface area 64 mm2. ", "the wavelength corresponding to the maximum intensity of light is 1160 nm", "taking the average wavelength of emitted radiation to be 1740 nm, the total number of photons entering per second into one eye of the observer is in the range 2.75 × 1011 to 2.85 × 1011"],
-    4: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    5: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    6: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    7: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    8: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    9: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    10: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    11: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-    12: ["Expansion of WWW :", "Wrong Water Web", "Wage for Wilde Work", "World Wide Web", "Wakeup Work Worry"],
-};
 
 currentQn = "1";
 currentObj = "qb1";
@@ -117,7 +186,7 @@ function res() {
 
 }
 
-function loadQn() {
+function downloadQn() {
 
 }
 
@@ -125,11 +194,11 @@ function autoSubmit() {
 
 }
 
-function autoSave(){
+function autoSave() {
 
 }
 
-function submitUpload(){
+function submitUpload() {
 
 }
 
@@ -151,3 +220,11 @@ var x = setInterval(function () {
         document.getElementById("timerDis").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+
+function Overlay(overlay) {
+    document.getElementById(overlay).style.visibility = true;
+    setTimeout(function () {
+        document.getElementById(overlay).style.visibility = false;
+    }, 2000);
+}

@@ -286,7 +286,14 @@
   }
 
   body{
-      overflow: hidden;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+                              
   }
 
   .overlay{
@@ -311,7 +318,7 @@
 }
 
 .errorOverlay{
-    background-image: linear-gradient(rgb(255,0,0,0.7), rgba(0, 0, 0, 0.7));
+    background-image: linear-gradient(rgb(255,0,0,1), rgba(0, 0, 0, 0.9));
 }
 
 .successOverlay{
